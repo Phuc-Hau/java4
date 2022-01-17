@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Register</title>
-<link rel="stylesheet" type="text/css" href="../CSS/register.css">
+<link rel="stylesheet" type="text/css" href="../views/CSS/register.css">
 </head>
 <body>
     <form onsubmit="return check()">
