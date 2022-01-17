@@ -21,7 +21,7 @@ body {
 <body >
 <div class="container">
   <h2>FORGET PASSWORD</h2>
-  <form action="/action_page.php">
+  <form action="/action_page.php" method="post">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">

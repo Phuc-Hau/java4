@@ -30,8 +30,8 @@
 			    <button>Đăng ký</button>
 			    </div>
 			</div>
-    <br>
-</div>
-</form>
+    		<br>
+		</div>
+	</form>
 </body>
 </html>
