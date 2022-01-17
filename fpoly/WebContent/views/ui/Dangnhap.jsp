@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="../poly/dangnhap" method="post">
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -56,10 +56,10 @@
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            Chưa Có Tài Khoản<a href="#">Đăng Ký</a>
+                            Chưa Có Tài Khoản<a href="../views/ui/Register.jsp">Đăng Ký</a>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a href="#">Quên Mật Khẩu ?</a>
+                            <a href="../views/ui/forgetpassword.jsp">Quên Mật Khẩu ?</a>
                         </div>
                     </div>
                 </div>
