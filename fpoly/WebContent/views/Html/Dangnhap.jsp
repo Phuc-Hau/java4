@@ -59,7 +59,7 @@
                             Chưa Có Tài Khoản<a href="../views/ui/Register.jsp">Đăng Ký</a>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a href="../views/ui/forgetpassword.jsp">Quên Mật Khẩu ?</a>
+                            <a href="#">Quên Mật Khẩu ?</a>
                         </div>
                     </div>
                 </div>
