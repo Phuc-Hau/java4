@@ -1,8 +1,10 @@
-<!doctype html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>Đăng Nhập</title>
+    <title>ÄÄng Nháº­p</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +29,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            <b>Đăng Nhập</b>
+                            <b>ÄÄng Nháº­p</b>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
@@ -47,7 +49,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <button class="btn btn-success">Đăng Nhập</button>
+                            <button class="btn btn-success">ÄÄng Nháº­p</button>
                         </div>
                     </div>
                 </form>

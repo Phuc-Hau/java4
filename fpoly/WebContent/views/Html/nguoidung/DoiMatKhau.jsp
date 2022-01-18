@@ -1,8 +1,9 @@
-<!doctype html>
-<html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Quên Mật Khẩu</title>
+    <title>QuÃªn Máº­t Kháº©u</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +29,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            Đổi Mật Khẩu
+                            Äá»i Máº­t Kháº©u
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -50,26 +51,26 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="nhapmatkhaumoi">Nhập Mật Khẩu Mới</label>
+                                        <label for="nhapmatkhaumoi">Nháº­p Máº­t Kháº©u Má»i</label>
                                         <input type="password" class="form-control" name="nhapmatkhaumoi"
                                             id="nhapmatkhaumoi" aria-describedby="nhapmatkhaumoiHid"
-                                            placeholder="Nhập Mật Khẩu Mới">
-                                        <small id="nhapmatkhaumoiHid" class="form-text text-muted">Nhập Mật Khẩu
-                                            Mới</small>
+                                            placeholder="Nháº­p Máº­t Kháº©u Má»i">
+                                        <small id="nhapmatkhaumoiHid" class="form-text text-muted">Nháº­p Máº­t Kháº©u
+                                            Má»i</small>
                                     </div>
                                     <div class="form-group">
-                                        <label for="xacnhanmatkhau">Xác Nhận Mật Khẩu</label>
+                                        <label for="xacnhanmatkhau">XÃ¡c Nháº­n Máº­t Kháº©u</label>
                                         <input type="password" class="form-control" name="xacnhanmatkhau"
                                             id="xacnhanmatkhau" aria-describedby="xacnhanmatkhauHid"
-                                            placeholder="Xác Nhận Mật Khẩu">
-                                        <small id="xacnhanmatkhauHid" class="form-text text-muted">Nhập Mật Khẩu
-                                            Mới</small>
+                                            placeholder="XÃ¡c Nháº­n Máº­t Kháº©u">
+                                        <small id="xacnhanmatkhauHid" class="form-text text-muted">Nháº­p Máº­t Kháº©u
+                                            Má»i</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <button class="btn btn-success">Đổi Mật Khẩu</button>
+                            <button class="btn btn-success">Äá»i Máº­t Kháº©u</button>
                         </div>
                     </div>
                 </form>

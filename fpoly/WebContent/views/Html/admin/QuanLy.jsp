@@ -1,8 +1,9 @@
-<!doctype html>
-<html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Quản Lý</title>
+    <title>Quáº£n LÃ½</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +17,7 @@
     <main class="container-fluid">
         <nav class="row">
             <nav class="navbar navbar-expand-sm navbar-light bg-light col">
-                <a class="navbar-brand" href="#">Quản Trị Viên</a>
+                <a class="navbar-brand" href="#">Quáº£n Trá» ViÃªn</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                     data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -25,18 +26,18 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Trang Chá»§ <span class="sr-only">(current)</span></a>
                         </li>
 
                         <div class="nav-item">
                             <a href="" class="nav-link">
-                                <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
+                                <i class="fa fa-id-card" aria-hidden="true"></i> NgÆ°á»i DÃ¹ng
                             </a>
                         </div>
 
                         <div class="nav-item">
                             <a href="" class="nav-link">
-                                <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
+                                <i class="fa fa-comments" aria-hidden="true"></i> BÃ¡o CÃ¡o
                             </a>
                         </div>
 
@@ -92,23 +93,23 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="luotxem">Lượt Xem</label>
+                                            <label for="luotxem">LÆ°á»£t Xem</label>
                                             <input type="text" class="form-control" name="luotxem" id="luotxem"
-                                                aria-describedby="luotxemHid" placeholder="Lượt Xem">
-                                            <small id="luotxemHid" class="form-text text-muted">Lượt Xem </small>
+                                                aria-describedby="luotxemHid" placeholder="LÆ°á»£t Xem">
+                                            <small id="luotxemHid" class="form-text text-muted">LÆ°á»£t Xem </small>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <label><input type="radio" class="form-check-input" value="true"
-                                                    name="status" id="status">Hoạt Động</label>
+                                                    name="status" id="status">Hoáº¡t Äá»ng</label>
                                             <label><input type="radio" class="form-check-input" value="false"
-                                                    name="status" id="status">Không Hoạt Động</label>
+                                                    name="status" id="status">KhÃ´ng Hoáº¡t Äá»ng</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <label for="description">Ghi Chú</label>
+                                        <label for="description">Ghi ChÃº</label>
                                         <textarea name="description" id="description" cols="30" rows="4"
                                             class="form-control"></textarea>
                                     </div>
@@ -128,15 +129,15 @@
                         <tr>
                             <td>Phimmoi ID</td>
                             <td>Video Title</td>
-                            <td>Lượt Xem</td>
-                            <td>Trạng Thái</td>
+                            <td>LÆ°á»£t Xem</td>
+                            <td>Tráº¡ng ThÃ¡i</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>PM00001</td>
-                            <td>Naruto Shippuden Tập 1</td>
+                            <td>Naruto Shippuden Táº­p 1</td>
                             <td>1000</td>
-                            <td>Hoạt Động</td>
+                            <td>Hoáº¡t Äá»ng</td>
                             <td>
                                 <a href=""><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
                                 <a href=""><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>

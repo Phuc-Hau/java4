@@ -1,8 +1,9 @@
-<!doctype html>
-<html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Chỉnh Sửa Thông Tin</title>
+    <title>Chá»nh Sá»­a ThÃ´ng Tin</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +28,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            <b>Chỉnh Sửa Thông Tin</b>
+                            <b>Chá»nh Sá»­a ThÃ´ng Tin</b>
                         </div>
                         <div class="card-body">
                             <div class="row">
