@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny">
-		<form method="post" action="../oe/forgetpass" onsubmit="" id="u_0_a_10">
+		<form method="post" action="../oe/datpass" onsubmit="" id="u_0_a_10">
 			
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
@@ -25,7 +25,7 @@
 					<div class="_9nq2 marginBottom20px">Vui lòng kiểm tra mã trong email của bạn. Mã này gồm 6 số.</div>
 					<div class="clearfix">
 						<div class="_9o1z">
-							<input type="text" class="inputtext _9o1w _9o1_" name="n" id="recovery_code_entry" placeholder="Nhập mã" aria-label="Nhập mã">
+							<input style="margin-top: 3px;" type="text" class="inputtext _9o1w _9o1_" name="n" id="recovery_code_entry" placeholder="Nhập mã" aria-label="Nhập mã">
 						</div>
 						<div class="_9o1-">
 							<div class="_9o1x marginBottom10px">Chúng tôi đã gửi cho bạn mã đến:</div>
@@ -37,10 +37,10 @@
 				<div class="hu uiInterstitialBar uiBoxGray topborder">
 					<div class="clearfix uu">
 							<div class="rfloat _ohf">
-								<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" name="reset_action" href="/">Hủy</a>
-								<button value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" name="reset_action" type="submit">Tiếp tục</button>
+								<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" name="reset_action" href="../views/Html/nguoidung/DangNhap.jsp">Hủy</a>
+								<button  value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" name="reset_action" type="submit">Tiếp tục</button>
 							</div>
-							<div class="pts"><a class="_9o1v" href="/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQyNDM1NzkwLCJjYWxsc2l0ZV9pZCI6NDAwMDE1NzU4MDUxMTIzfQ%3D%3D">Bạn chưa có mã?</a>
+							<div class="pts" style="height: 30px;margin-top: -34px;"><a class="_9o1v" href="/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQyNDM1NzkwLCJjYWxsc2l0ZV9pZCI6NDAwMDE1NzU4MDUxMTIzfQ%3D%3D">Bạn chưa có mã?</a>
 							</div>
 					</div>
 				</div>

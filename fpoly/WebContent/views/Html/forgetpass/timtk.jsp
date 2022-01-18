@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny" id="login_help">
-		<form rel="async" id="identify_yourself_flow" action="../oe/forgetpass" method="post" onsubmit="">
+		<form rel="async" id="identify_yourself_flow" action="../oe/confirmEmail" method="post" onsubmit="">
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">

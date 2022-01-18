@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class forgetpass
  */
-@WebServlet("/oe/forgetpass")
+@WebServlet({"/oe/account","/oe/confirmEmail","/oe/datpass","/oe/capcha"})
 public class forgetpass extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,7 +22,15 @@ public class forgetpass extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/views/Html/forgetpass/forgetpassword.jsp").forward(request, response);
+		String uri = request.getRequestURI();
+		if(uri.contains("/oe/confirmEmail")) {
+			request.getRequestDispatcher("/views/Html/forgetpass/capcha.jsp").forward(request, response);
+		} else if(uri.contains("/oe/capcha")) {
+			request.getRequestDispatcher("/views/Html/forgetpass/forgetpassword.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("/views/Html/forgetpass/datpass.jsp").forward(request, response);
+		}
+		
 	}
 
 }
