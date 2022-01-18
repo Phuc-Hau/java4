@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container-fluid">
+        <nav class="row">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light col">
+                <a class="navbar-brand" href="#">Quản Trị Viên</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <div class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
+                            </a>
+                        </div>
+
+                        <div class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
+                            </a>
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </nav>
+        
+        <section class="row">
+            <div class="col mt-4">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="videoEdit-tab" data-toggle="tab" href="#videoEdit" role="tab"
+                            aria-controls="videoEdit" aria-selected="true">User Edit</a>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="videoList-tab" data-toggle="tab" href="#videoList" role="tab"
+                            aria-controls="videoList" aria-selected="false">User List</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="videoEdit" role="tabpanel"
+                        aria-labelledby="videoEdit-tab">
+                        <form action="" method="post">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" name="username" id="username"
+                                                    aria-describedby="usernameHid" placeholder="Username">
+                                                <small id="usernameHid" class="form-text text-muted">Username is
+                                                    required</small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="fullname">Fullname</label>
+                                                <input type="text" class="form-control" name="fullname" id="fullname"
+                                                    aria-describedby="fullnameHid" placeholder="Fullname">
+                                                <small id="fullnameHid" class="form-text text-muted">Fullname is
+                                                    required</small>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password" class="form-control" name="password"
+                                                    id="password" aria-describedby="passwordHid" placeholder="Password">
+                                                <small id="passwordHid" class="form-text text-muted">Password is
+                                                    required</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" name="email" id="email"
+                                                    aria-describedby="emailHid" placeholder="Email">
+                                                <small id="emailHid" class="form-text text-muted">Email is
+                                                    required</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <button class="btn btn-primary">Create</button>
+                                    <button class="btn btn-warning">Update</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                    <button class="btn btn-info">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
+                        <table class="table table-stripe">
+                            <tr>
+                                <td>Username</td>
+                                <td>Họ Và Tên</td>
+                                <td>Email</td>
+                                <td>Chức Vụ</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>PS15500</td>
+                                <td>Nguyễn Thanh Tâm</td>
+                                <td>tamnt1603@gmail.com</td>
+                                <td>Quản Lý</td>
+                                <td>
+                                    <a href=""><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
+                                    <a href=""><i class="fa fa-trash" aria-hidden="true">  Delete</i></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="row">
+            
+        </footer>
+        <header class="row pt-5 pb-2">
+            <div class="col-9">
+            
+            </div>
+            <div class="col-3 text-right">
+                <img src="../images/avengerposter.jpg" width="100" height="50" alt="" class="mr-4">
+            </div>
+        </header>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#myTab a').on('click', function (event) {
+            event.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+</body>
+
+</html>
