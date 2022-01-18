@@ -45,7 +45,7 @@
                                 <small id="passwordHid" class="form-text text-muted">Password id required</small>
                             </div>
                             <div class="form-check form-check-inline">
-                                <label><input type="radio" class="form-check-input" name="remember">Remember me</label>
+                                <label><input type="checkbox" class="form-check-input" name="remember">Remember me</label>
                             </div>
                         </div>
                         <div class="card-footer text-muted">
