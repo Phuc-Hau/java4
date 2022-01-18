@@ -1,4 +1,4 @@
-package entity;
+package com.oe.entity;
 
 public class Video {
 	private String id;

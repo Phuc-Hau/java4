@@ -20,6 +20,30 @@
   			<version>1.9.3</version>
   		</dependency>
   	
+  		<dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.5</version>
+	    </dependency>
+	 
+	    <dependency>
+	        <groupId>javax.activation</groupId>
+	        <artifactId>activation</artifactId>
+	        <version>1.1.1</version>
+	    </dependency>
+	    
+	    <dependency>
+	    	<groupId>org.hibernate</groupId>
+	    	<artifactId>hibernate-core</artifactId>
+	    	<version>5.2.12.Final</version>
+	    </dependency>
+	    
+	    <dependency>
+	    	<groupId>com.microsoft.sqlserver</groupId>
+	    	<artifactId>mssql-jdbc</artifactId>
+	    	<version>9.4.0.jre11</version>
+	    </dependency>
+	    
 	</dependencies>
 	<name>Servlet &amp; JSP</name>
 	<build>

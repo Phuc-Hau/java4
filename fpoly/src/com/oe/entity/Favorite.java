@@ -1,13 +1,12 @@
-package entity;
+package com.oe.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
-public class Share {
+public class Favorite {
 	private long id;
 	private String userID;
 	private String videoID;
-	private String email;
-	private Date shareDate;
+	private Date likeDate;
 	public long getId() {
 		return id;
 	}
@@ -26,17 +25,11 @@ public class Share {
 	public void setVideoID(String videoID) {
 		this.videoID = videoID;
 	}
-	public String getEmail() {
-		return email;
+	public Date getLikeDate() {
+		return likeDate;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Date getShareDate() {
-		return shareDate;
-	}
-	public void setShareDate(Date shareDate) {
-		this.shareDate = shareDate;
+	public void setLikeDate(Date likeDate) {
+		this.likeDate = likeDate;
 	}
 	
 	
