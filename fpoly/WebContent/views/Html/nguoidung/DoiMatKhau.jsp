@@ -29,7 +29,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            Äá»i Máº­t Kháº©u
+                            Đổi Mật Khẩu
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -51,26 +51,26 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="nhapmatkhaumoi">Nháº­p Máº­t Kháº©u Má»i</label>
+                                        <label for="nhapmatkhaumoi">Nhập Mật Khẩu Mới</label>
                                         <input type="password" class="form-control" name="nhapmatkhaumoi"
                                             id="nhapmatkhaumoi" aria-describedby="nhapmatkhaumoiHid"
-                                            placeholder="Nháº­p Máº­t Kháº©u Má»i">
-                                        <small id="nhapmatkhaumoiHid" class="form-text text-muted">Nháº­p Máº­t Kháº©u
-                                            Má»i</small>
+                                            placeholder="Nhập Mật Khẩu Mới">
+                                        <small id="nhapmatkhaumoiHid" class="form-text text-muted">Nhập Mật Khẩu
+                                            Mới</small>
                                     </div>
                                     <div class="form-group">
-                                        <label for="xacnhanmatkhau">XÃ¡c Nháº­n Máº­t Kháº©u</label>
+                                        <label for="xacnhanmatkhau">Xác Nhận Mật Khẩu</label>
                                         <input type="password" class="form-control" name="xacnhanmatkhau"
                                             id="xacnhanmatkhau" aria-describedby="xacnhanmatkhauHid"
-                                            placeholder="XÃ¡c Nháº­n Máº­t Kháº©u">
-                                        <small id="xacnhanmatkhauHid" class="form-text text-muted">Nháº­p Máº­t Kháº©u
-                                            Má»i</small>
+                                            placeholder="Xác Nhận Mật Khẩu">
+                                        <small id="xacnhanmatkhauHid" class="form-text text-muted">Nhập Mật Khẩu
+                                            Mới</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <button class="btn btn-success">Äá»i Máº­t Kháº©u</button>
+                            <button class="btn btn-success">Đổi Mật Khẩu</button>
                         </div>
                     </div>
                 </form>
@@ -89,5 +89,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>

@@ -29,7 +29,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            <b>ÄÄng Nháº­p</b>
+                            <b>Đăng Nhập</b>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-muted">
-                            <button class="btn btn-success">ÄÄng Nháº­p</button>
+                            <button class="btn btn-success">Đăng Nhập</button>
                         </div>
                     </div>
                 </form>
@@ -68,5 +68,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>

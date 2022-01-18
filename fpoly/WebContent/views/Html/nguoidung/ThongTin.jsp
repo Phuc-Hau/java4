@@ -28,7 +28,7 @@
                 <form action="" method="post">
                     <div class="card">
                         <div class="card-header">
-                            <b>Chá»nh Sá»­a ThÃ´ng Tin</b>
+                            <b>Chỉnh Sửa Thông Tin</b>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -86,5 +86,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>
