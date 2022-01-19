@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny">
-		<form method="post" action="/recover/password/write/?u=100024755467807&amp;n=733874&amp;fl=default_recover" onsubmit="" id="u_0_a_oY"><input type="hidden" name="jazoest" value="2939" autocomplete="off"><input type="hidden" name="lsd" value="AVrkQpZKX8A" autocomplete="off">
+		<form method="post" action="/recover/password/write/?u=100024755467807&amp;n=733874&amp;fl=default_recover" onsubmit="" id="u_0_a_oY">
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
