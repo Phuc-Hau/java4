@@ -315,3 +315,20 @@ form .accessible_elem {
 input:focus {
 	outline: none;
 }
+
+.clearfix .olo{
+	margin-top: 20px;
+	max-width: 510px;
+}
+
+form ._52lr {
+    margin-bottom: 0;
+}
+form ._52lr {
+    color: #606770;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-left: 18px;
+}
