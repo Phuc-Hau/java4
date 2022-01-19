@@ -33,7 +33,7 @@
 								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="password_new" placeholder="Password">
 								
 							</div>
-							<button value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng ký</button>
+							<button value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
 							
 							<div  class="_6ltj">
 								<a href="#">Quên mật khẩu?</a>
