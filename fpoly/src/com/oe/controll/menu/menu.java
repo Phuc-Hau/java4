@@ -20,11 +20,14 @@ public class menu extends HttpServlet {
 			request.setAttribute("uri", "../nguoidung/uathich.jsp");
 			request.setAttribute("uathich", "lu");
 		}else if(uri.contains("/oe/phimnhatban")) {
-//			request.setAttribute("uri", "../nguoidung/uathich.jsp");
+			request.setAttribute("uri", "../nguoidung/phimnhatban.jsp");
+			request.setAttribute("phimnhatban", "lu");
 		}else if(uri.contains("/oe/phimus&uk")) {
-//			request.setAttribute("uri", "../nguoidung/uathich.jsp");
+			request.setAttribute("uri", "../nguoidung/phimus&uk.jsp");
+			request.setAttribute("phimusuk", "lu");
 		}else if(uri.contains("/oe/phimhanquoc")) {
-//			request.setAttribute("uri", "../nguoidung/uathich.jsp");
+			request.setAttribute("uri", "../nguoidung/phimhanquoc.jsp");
+			request.setAttribute("phimhanquoc", "lu");
 		}else {
 			request.setAttribute("uri", "../card/video.jsp");
 			request.setAttribute("trangchu", "lu");

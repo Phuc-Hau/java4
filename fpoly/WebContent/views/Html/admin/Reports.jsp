@@ -31,19 +31,19 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="..oe/nhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
 
-                        <div class="nav-item">
+                        <div class="nav-item" style="background-color: aqua; border-radius: 27px;">
                             <a href="" class="nav-link">
-                                <i class="fa fa-comments" aria-hidden="true"></i> Reports
+                                <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
+                            <a class="nav-link" href="../oe/QuanLyvideo"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
                         </li>
 
                     </ul>
