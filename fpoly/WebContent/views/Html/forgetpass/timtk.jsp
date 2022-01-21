@@ -42,7 +42,7 @@
 				<div class="hu uiInterstitialBar uiBoxGray topborder">
 					<div class="clearfix">
 						<div class="rfloat _ohf" style="margin-left: 289px">
-							<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" href="../oe/dangnhap">Hủy</a>
+							<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" href="../oe/index">Hủy</a>
 							<button value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" type="submit" name="did_submit" id="did_submit">Tìm kiếm</button>
 						</div>
 						<div class="pts"></div>

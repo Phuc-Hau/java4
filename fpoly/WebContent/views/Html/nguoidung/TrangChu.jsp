@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,9 +89,9 @@
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 Tài Khoản</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="#">Đăng Nhập</a>
-                                <a class="dropdown-item" href="#">Đăng Ký</a>
-                                <a class="dropdown-item" href="#">Quên Mật Khẩu</a>
+                                <a class="dropdown-item" href="../oe/dangnhap">Đăng Nhập</a>
+                                <a class="dropdown-item" href="../oe/dangky">Đăng Ký</a>
+                                <a class="dropdown-item" href="../oe/forgetpass">Quên Mật Khẩu</a>
                                 <a class="dropdown-item" href="#">Đăng Xuất</a>
                             </div>
                         </li>
@@ -101,7 +104,12 @@
             <div class="col-9">
                 <div class="row p-2">
 
-
+						<jsp:include page="../card/video.jsp">
+							<jsp:param value="${ite.img}" name="img"/>
+							<jsp:param value="${ite.video}" name="name"/>
+							<jsp:param value="${ite.titile}" name="titile"/>
+						</jsp:include>
+						
                     <div class="col-3 mt-2">
                         <div class="card text-center">
 
@@ -231,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-
+                    		
 
                 </div>
 

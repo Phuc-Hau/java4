@@ -44,6 +44,11 @@
 	    	<version>9.4.0.jre11</version>
 	    </dependency>
 	    
+	    <dependency>
+		  	<groupId>javax.servlet</groupId>
+	    	<artifactId>jstl</artifactId>
+	    	<version>1.2</version>
+		</dependency>
 	</dependencies>
 	<name>Servlet &amp; JSP</name>
 	<build>

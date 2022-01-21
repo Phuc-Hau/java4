@@ -37,7 +37,7 @@
 				<div class="hu uiInterstitialBar uiBoxGray topborder">
 					<div class="clearfix uu">
 							<div class="rfloat _ohf">
-								<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" name="reset_action" href="../views/Html/nguoidung/DangNhap.jsp">Hủy</a>
+								<a role="button" class="_42ft _4jy0 _9nq1 textPadding20px _4jy3 _517h _51sy" name="reset_action" href="../oe/index">Hủy</a>
 								<button  value="1" class="_42ft _4jy0 _9nq0 textPadding20px _4jy3 _4jy1 selected _51sy" name="reset_action" type="submit">Tiếp tục</button>
 							</div>
 							<div class="pts" style="height: 30px;margin-top: -34px;"><a class="_9o1v" href="/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQyNDM1NzkwLCJjYWxsc2l0ZV9pZCI6NDAwMDE1NzU4MDUxMTIzfQ%3D%3D">Bạn chưa có mã?</a>
