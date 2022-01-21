@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet({"/oe/dangnhap","/oe/login","/oe/taotaikhoang"})
+@WebServlet({"/oe/dangnhap","/oe/login","/oe/taotaikhoang","/oe/huy"})
 public class dangnhap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +26,7 @@ public class dangnhap extends HttpServlet {
 		} else if(uri.contains("oe/login")) {
 			
 		} else {
-			
+			request.getRequestDispatcher("/views/Html/nguoidung/TrangChu.jsp").forward(request, response);
 		}
 		
 	}
