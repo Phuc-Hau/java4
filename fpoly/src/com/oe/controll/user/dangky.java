@@ -1,4 +1,4 @@
-package com.oe.controll;
+package com.oe.controll.user;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,16 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class tieupham
- */
-@WebServlet("/tieupham")
-public class tieupham extends HttpServlet {
+
+@WebServlet("/oe/dangky")
+public class dangky extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+       
+  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/views/Html/nguoidung/TrangChu.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/Html/user/DangKy.jsp").forward(request, response);
 	}
 
 	
