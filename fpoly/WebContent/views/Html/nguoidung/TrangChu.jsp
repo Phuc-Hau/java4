@@ -68,13 +68,6 @@
                                 <i class="fa fa-id-info" aria-hidden="true"></i>
                                 Phim Hàn Quốc</a>
                         </li>
-                        
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fa fa-id-card" aria-hidden="true"></i>
-                                Liên Hệ Với Chúng Tôi</a>
-                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -110,12 +103,11 @@
 							<jsp:param value="${ite.titile}" name="titile"/>
 						</jsp:include>
 						
+						<a href="">
                     <div class="col-3 mt-2">
                         <div class="card text-center">
-
                             <div class="card-body">
-                                <!-- <img src="../images/avengerposter.jpg" width="90%" alt="" class="img-fluid"> -->
-                                <iframe src="https://youtube.com/embed/9perW4O3apI" width="140" height="180"></iframe>
+                            	<iframe src="https://youtube.com/embed/9perW4O3apI" width="140" height="180"></iframe>
                                 <div class="row border-top mt-2">
                                     <b>Mùa Xuân Đầu Tiên</b>
                                 </div>
@@ -126,6 +118,7 @@
                             </div>
                         </div>
                     </div>
+                    	</a>
 
 
                     <div class="col-3 mt-2">

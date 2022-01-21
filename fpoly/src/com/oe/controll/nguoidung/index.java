@@ -14,7 +14,9 @@ public class index extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/views/Html/nguoidung/TrangChu.jsp").forward(request, response);
+		request.setAttribute("trangchu", "lu");
+		request.setAttribute("uri", "../card/video.jsp");
+		request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
