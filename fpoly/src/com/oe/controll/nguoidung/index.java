@@ -20,7 +20,9 @@ public class index extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.setAttribute("trangchu", "lu");
+		request.setAttribute("uri", "../card/video.jsp");
+		request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
 	}
 
 }
