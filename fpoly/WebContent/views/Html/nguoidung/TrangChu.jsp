@@ -3,7 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 
-<jsp:include page="../card/video.jsp">
-	<jsp:param value="${ite.titile}" name="img"/>
-	<jsp:param value="${ite.video}" name="name"/>
-</jsp:include>
+	<c:forEach var="ite" items="${video}">
+		<jsp:include page="../card/video.jsp">
+			<jsp:param value="${ite.titile}" name="titile"/>
+			<jsp:param value="${ite.id}" name="id"/>
+		</jsp:include>
+	</c:forEach>
+
+

@@ -4,7 +4,7 @@
     <div class="card text-center">
 
         <div class="card-body">
-            <iframe src="${param.video}" width="140" height="180"></iframe>
+            <iframe src="${param.id}" width="140" height="180"></iframe>
             <div class="row border-top mt-2">
                 <b>${param.titile}</b>
             </div>

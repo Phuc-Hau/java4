@@ -1,20 +1,30 @@
 package com.oe.controll.menu;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oe.dao.DaoVideo;
+import com.oe.entity.Video;
+
 
 @WebServlet({"/oe/trangchu","/oe/phimnhatban","/oe/phimus&uk","/oe/phimhanquoc","/oe/uathich"})
 public class menu extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
+	Video video = new Video();
+	DaoVideo daoVideo = new DaoVideo();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		List<Video> list = daoVideo.findByAll();
+		request.setAttribute("video", list);
+		
 		String uri = request.getRequestURI();
 		if(uri.contains("/oe/uathich")) {
 			request.setAttribute("uri", "../nguoidung/uathich.jsp");
@@ -29,7 +39,7 @@ public class menu extends HttpServlet {
 			request.setAttribute("uri", "../nguoidung/phimhanquoc.jsp");
 			request.setAttribute("phimhanquoc", "lu");
 		}else {
-			request.setAttribute("uri", "../card/video.jsp");
+			request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
 			request.setAttribute("trangchu", "lu");
 		}
 

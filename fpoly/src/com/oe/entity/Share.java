@@ -1,43 +1,79 @@
 package com.oe.entity;
 
-import java.sql.Date;
+import java.io.Serializable;
+import javax.persistence.*;
 
-public class Share {
-	private long id;
-	private String userID;
-	private String videoID;
-	private String email;
-	private Date shareDate;
-	public long getId() {
-		return id;
+
+/**
+ * The persistent class for the Share database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Share.findAll", query="SELECT s FROM Share s")
+public class Share implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="Id")
+	private int id;
+
+	@Column(name="Emails")
+	private String emails;
+
+	@Column(name="ShareDate")
+	private String shareDate;
+
+	//bi-directional many-to-one association to User
+	@ManyToOne
+	@JoinColumn(name="UserId")
+	private User user;
+
+	//bi-directional many-to-one association to Video
+	@ManyToOne
+	@JoinColumn(name="VideoId")
+	private Video video;
+
+	public Share() {
 	}
-	public void setId(long id) {
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUserID() {
-		return userID;
+
+	public String getEmails() {
+		return this.emails;
 	}
-	public void setUserID(String userID) {
-		this.userID = userID;
+
+	public void setEmails(String emails) {
+		this.emails = emails;
 	}
-	public String getVideoID() {
-		return videoID;
+
+	public String getShareDate() {
+		return this.shareDate;
 	}
-	public void setVideoID(String videoID) {
-		this.videoID = videoID;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Date getShareDate() {
-		return shareDate;
-	}
-	public void setShareDate(Date shareDate) {
+
+	public void setShareDate(String shareDate) {
 		this.shareDate = shareDate;
 	}
-	
-	
+
+	public User getUser() {
+		return this.user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Video getVideo() {
+		return this.video;
+	}
+
+	public void setVideo(Video video) {
+		this.video = video;
+	}
+
 }
