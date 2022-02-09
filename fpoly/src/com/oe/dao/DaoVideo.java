@@ -1,6 +1,6 @@
 package com.oe.dao;
 
-import java.util.List;
+import java.util.List; 
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -72,6 +72,12 @@ public class DaoVideo extends DaoASM<Video, String>{
 		TypedQuery<Video> query = em.createQuery(jqpl,Video.class);
 		query.setFirstResult(page*pageSize);
 		query.setMaxResults(pageSize);
+		return query.getResultList();
+	}
+	
+	public List<Video> findUaThich(){
+		String jqpl ="select u from Video u ORDER BY Views DESC";
+		TypedQuery<Video> query = em.createQuery(jqpl,Video.class);
 		return query.getResultList();
 	}
 }

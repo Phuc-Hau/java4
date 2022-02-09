@@ -2,7 +2,6 @@ package com.oe.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -24,6 +23,8 @@ public class Video implements Serializable {
 	@Column(name="Descriptionn")
 	private String descriptionn;
 
+	private String img;
+
 	@Column(name="Poster")
 	private String poster;
 
@@ -32,14 +33,6 @@ public class Video implements Serializable {
 
 	@Column(name="Views")
 	private int views;
-
-	//bi-directional many-to-one association to Favorite
-	@OneToMany(mappedBy="video")
-	private List<Favorite> favorites;
-
-	//bi-directional many-to-one association to Share
-	@OneToMany(mappedBy="video")
-	private List<Share> shares;
 
 	public Video() {
 	}
@@ -68,6 +61,14 @@ public class Video implements Serializable {
 		this.descriptionn = descriptionn;
 	}
 
+	public String getImg() {
+		return this.img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
 	public String getPoster() {
 		return this.poster;
 	}
@@ -90,50 +91,6 @@ public class Video implements Serializable {
 
 	public void setViews(int views) {
 		this.views = views;
-	}
-
-	public List<Favorite> getFavorites() {
-		return this.favorites;
-	}
-
-	public void setFavorites(List<Favorite> favorites) {
-		this.favorites = favorites;
-	}
-
-	public Favorite addFavorite(Favorite favorite) {
-		getFavorites().add(favorite);
-		favorite.setVideo(this);
-
-		return favorite;
-	}
-
-	public Favorite removeFavorite(Favorite favorite) {
-		getFavorites().remove(favorite);
-		favorite.setVideo(null);
-
-		return favorite;
-	}
-
-	public List<Share> getShares() {
-		return this.shares;
-	}
-
-	public void setShares(List<Share> shares) {
-		this.shares = shares;
-	}
-
-	public Share addShare(Share share) {
-		getShares().add(share);
-		share.setVideo(this);
-
-		return share;
-	}
-
-	public Share removeShare(Share share) {
-		getShares().remove(share);
-		share.setVideo(null);
-
-		return share;
 	}
 
 }

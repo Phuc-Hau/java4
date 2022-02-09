@@ -20,20 +20,14 @@ public class index extends HttpServlet {
 	Video video = new Video();
 	DaoVideo daoVideo = new DaoVideo();
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Video> list = daoVideo.findByAll();
-		request.setAttribute("video", list);
+		req.setAttribute("video", list);
 		
-		request.setAttribute("trangchu", "lu");
-		request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
-		request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("trangchu", "lu");
-		request.setAttribute("uri", "../card/video.jsp");
-		request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
+		req.setAttribute("trangchu", "lu");
+		req.setAttribute("uri", "../nguoidung/TrangChu.jsp");
+		req.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(req, resp);
 	}
 
 }

@@ -19,14 +19,18 @@ public class menu extends HttpServlet {
 
 	Video video = new Video();
 	DaoVideo daoVideo = new DaoVideo();
-
+	List<Video> list = null;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		List<Video> list = daoVideo.findByAll();
+		
+		list = daoVideo.findByAll();
 		request.setAttribute("video", list);
 		
 		String uri = request.getRequestURI();
 		if(uri.contains("/oe/uathich")) {
+			list = daoVideo.findUaThich();
+			request.setAttribute("video", list);
 			request.setAttribute("uri", "../nguoidung/uathich.jsp");
 			request.setAttribute("uathich", "lu");
 		}else if(uri.contains("/oe/phimnhatban")) {
@@ -45,9 +49,4 @@ public class menu extends HttpServlet {
 
 		request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 }

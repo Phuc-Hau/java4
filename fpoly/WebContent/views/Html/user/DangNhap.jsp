@@ -26,13 +26,14 @@
 					<div>
 						<div class="clearfix">
 							<div class="_9okt olo" >
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="user_new" placeholder="User Name">
+								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="id" placeholder="User Name">
 		
 							</div >
 							<div class="_9okt olo">
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="password_new" placeholder="Password">
+								<input style="margin-top: 0px; border: none" type="password" class="yu inputtext _55r1 _9oku _9o1w" name="passwordd" placeholder="Password">
 								
 							</div>
+							<span style="color: red">${mess}</span><br>
 							<button formaction="../oe/login" value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
 							
 							<div  class="_6ltj">
