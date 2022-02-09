@@ -12,7 +12,7 @@ import com.oe.entity.Video;
 
 
 @WebServlet("/oe/chitietvideo/*")
-public class chitietvideo extends HttpServlet {
+public class Chitietvideo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	DaoVideo daoVideo = new DaoVideo();

@@ -33,7 +33,7 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="../oe/nhanvien" class="nav-link">
+                            <a href="/fpoly/oe/nhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
@@ -56,18 +56,18 @@
         <section class="row">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="videoEdit-tab" data-toggle="tab" href="#videoEdit" role="tab"
-                        aria-controls="videoEdit" aria-selected="true">Edit Video</a>
+                    <a class="nav-link ${activeedit}" id="videoEdit-tab" data-toggle="tab" href="#videoEdit" role="tab"
+                        aria-controls="videoEdit" aria-selected="${!edittrue}">Edit Video</a>
                 </li>
 
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="videoList-tab" data-toggle="tab" href="#videoList" role="tab"
-                        aria-controls="videoList" aria-selected="false">Video List</a>
+                    <a class="nav-link  ${activelist}" id="videoList-tab" data-toggle="tab" href="#videoList" role="tab"
+                        aria-controls="videoList" aria-selected="${edittrue}">Video List</a>
                 </li>
 
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="videoEdit" role="tabpanel" aria-labelledby="videoEdit-tab">
+                <div class="tab-pane fade ${showedit}" id="videoEdit" role="tabpanel" aria-labelledby="videoEdit-tab">
                     <form action="" method="post">
                         <div class="card">
 
@@ -81,7 +81,7 @@
                                     <div class="col-9">
                                         <div class="form-group">
                                             <label for="phimmoiId">Phimmoi ID</label>
-                                            <input type="text" class="form-control" name="phimmoiId" id="phimmoiId"
+                                            <input ${readonly} type="text" class="form-control" name="phimmoiId" id="phimmoiId"
                                                 aria-describedby="phimmoiIdHid" placeholder="Phimmoi ID">
                                             <small id="phimmoiIdHid" class="form-text text-muted">Phimmoi ID your
                                                 required</small>
@@ -127,7 +127,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="tab-pane fade" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
+                <div class="tab-pane fade ${showlist}" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                     <table class="table table-stripe">
                         <tr style="background-color: antiquewhite;">
                             <td>Phimmoi ID</td>
@@ -141,10 +141,20 @@
 	                            <td>${video.id}</td>
 	                            <td>${video.titile}</td>
 	                            <td>${video.views}</td>
-	                            <td>Hoạt Động</td>
 	                            <td>
-	                                <a href=""><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
-	                                <a href=""><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
+	                            	<c:choose>
+	                            		<c:when test="${video.active}">Hoạt Động</c:when>
+	                            		<c:otherwise>Không Hoạt Động</c:otherwise>
+	                            	</c:choose>
+	                            </td>
+	                            <td style="display: flex;">
+	                            	<form action="/fpoly/oe/edit/${video.id}" method="post">
+	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
+	                            	</form>
+	                                <form style="margin-left: 12px;" action="/fpoly/oe/delete/${video.id}" method="post">
+	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
+	                                </form>
+	                                
 	                            </td>
 	                        </tr>
                         	
