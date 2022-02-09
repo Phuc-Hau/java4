@@ -81,10 +81,7 @@
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 Tài Khoản</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="../oe/dangnhap">Đăng Nhập</a>
-                                <a class="dropdown-item" href="../oe/dangky">Đăng Ký</a>
-                                <a class="dropdown-item" href="../oe/forgetpass">Quên Mật Khẩu</a>
-                                <a class="dropdown-item" href="#">Đăng Xuất</a>
+                            	${auth}
                             </div>
                         </li>
                     </ul>

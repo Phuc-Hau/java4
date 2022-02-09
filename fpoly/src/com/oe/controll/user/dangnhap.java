@@ -17,7 +17,7 @@ import com.oe.entity.User;
 import com.oe.entity.Video;
 import com.oe.untils.Auth;
 
-@WebServlet({"/oe/dangnhap","/oe/login","/oe/taotaikhoang"})
+@WebServlet({"/oe/dangnhap","/oe/login"})
 public class dangnhap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,9 +42,7 @@ public class dangnhap extends HttpServlet {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		if(uri.contains("oe/taotaikhoang")) {
-			request.getRequestDispatcher("/views/Html/user/DangKy.jsp").forward(request, response);
-		} else if(uri.contains("oe/login")) {
+		if(uri.contains("oe/login")) {
 			try {
 				User tk = daoUser.checkLogin(user.getId(), user.getPasswordd());
 				if( (tk.getId().equals(user.getId()) ) && (tk.getPasswordd().equals(user.getPasswordd())) ) {
@@ -53,14 +51,14 @@ public class dangnhap extends HttpServlet {
 					request.setAttribute("video", list);
 					request.setAttribute("trangchu", "lu");
 					request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
-					request.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(request, response);
+					request.getRequestDispatcher("/oe/trangchu").forward(request, response);
 				}
 				
 			} catch (Exception e) {
 				request.setAttribute("mess", "Sai Tên hoặc mật khẩu");
 				request.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(request, response);
 			}
-		} else {
+		}else {
 			request.getRequestDispatcher("/oe/trangchu").forward(request, response);
 		}
 		
