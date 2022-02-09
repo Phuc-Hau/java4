@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../CSS/chitiet.css">
+    <link rel="stylesheet" href="../views/CSS/chitiet.css">
 </head>
 
 <body>
@@ -29,12 +29,12 @@
 
                     <div class="card-body" >
                         <div class="row">
-                            <iframe src="https://youtube.com/embed/9perW4O3apI" width="950" height="450"></iframe>
+                            <iframe src="${video.id}" width="950" height="450"></iframe>
                         </div>
 						<div style="display: flex;">
 							<div class="p-2" style="width: 76%; text-align: left;">
-                            	<b>Mua xuan </b> </br>
-                            	<b>Nhu xuan </b>
+                            	<b>${video.titile} </b> </br>
+                            	<b>${video.poster}</b>
 	                        </div>
 	                     
 							<div class="text-right" style="margin-top: 22px;">
