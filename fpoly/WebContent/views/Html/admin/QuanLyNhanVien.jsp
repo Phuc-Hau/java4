@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 
@@ -120,23 +122,33 @@
                     </div>
                     <div class="tab-pane fade" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                         <table class="table table-stripe">
-                            <tr>
+                            <tr style="background-color: antiquewhite;">
+                            	<td>STT</td>
                                 <td>Username</td>
                                 <td>Họ Và Tên</td>
                                 <td>Email</td>
                                 <td>Chức Vụ</td>
                                 <td>&nbsp;</td>
                             </tr>
-                            <tr>
-                                <td>PS15500</td>
-                                <td>Nguyễn Thanh Tâm</td>
-                                <td>tamnt1603@gmail.com</td>
-                                <td>Quản Lý</td>
-                                <td>
-                                    <a href=""><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
-                                    <a href=""><i class="fa fa-trash" aria-hidden="true">  Delete</i></a>
-                                </td>
-                            </tr>
+                            <c:forEach var="users" items="${listuser}">
+                            	<tr>
+                            		<td> </td>
+	                                <td>${users.id}</td>
+	                                <td>${users.fullname}</td>
+	                                <td>${users.email}</td>
+	                                <td>
+	                                	<c:choose>
+	                                		<c:when test="${users.adminn}">Quản Lý</c:when>
+	                                		<c:when test="${users.adminn}">Người dùng</c:when>
+	                                	</c:choose>
+	                                </td>
+	                                <td>
+	                                    <a href=""><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
+	                                    <a href=""><i class="fa fa-trash" aria-hidden="true">  Delete</i></a>
+	                                </td>
+                           		</tr>
+                            </c:forEach>
+                            
                         </table>
                     </div>
                 </div>

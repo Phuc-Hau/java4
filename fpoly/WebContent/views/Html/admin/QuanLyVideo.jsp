@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quáº£n LÃ½</title>
+    <title>Quản lý video</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -126,23 +129,26 @@
                 </div>
                 <div class="tab-pane fade" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                     <table class="table table-stripe">
-                        <tr>
+                        <tr style="background-color: antiquewhite;">
                             <td>Phimmoi ID</td>
                             <td>Video Title</td>
                             <td>Lượt Xem</td>
                             <td>Trạng Thái</td>
-                            <td>&nbsp;</td>
+                            <td>Edit</td>
                         </tr>
-                        <tr>
-                            <td>PM00001</td>
-                            <td>Naruto Shippuden Tập 1</td>
-                            <td>1000</td>
-                            <td>Hoạt Động</td>
-                            <td>
-                                <a href=""><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
-                                <a href=""><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
-                            </td>
-                        </tr>
+                        <c:forEach var="video" items="${listvideo}">
+                        	<tr>
+	                            <td>${video.id}</td>
+	                            <td>${video.titile}</td>
+	                            <td>${video.views}</td>
+	                            <td>Hoạt Động</td>
+	                            <td>
+	                                <a href=""><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
+	                                <a href=""><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
+	                            </td>
+	                        </tr>
+                        	
+                        </c:forEach>
                     </table>
                 </div>
             </div>

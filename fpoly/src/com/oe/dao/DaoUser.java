@@ -56,7 +56,7 @@ public class DaoUser extends DaoASM<User, String>{
 
 	@Override
 	public List<User> findByAll() {
-		String jqpl ="SELECT u FROM User";
+		String jqpl ="SELECT u FROM User u";
 		TypedQuery<User> query = em.createQuery(jqpl,User.class);
 		return query.getResultList();
 	}
