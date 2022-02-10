@@ -4,11 +4,8 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 
-/**
- * The persistent class for the Video database table.
- * 
- */
 @Entity
+@Table(name="Video")
 @NamedQuery(name="Video.findAll", query="SELECT v FROM Video v")
 public class Video implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -93,4 +90,14 @@ public class Video implements Serializable {
 		this.views = views;
 	}
 
+	public Video(String id, boolean active, String descriptionn, String img, String poster, String titile, int views) {
+		super();
+		this.id = id;
+		this.active = active;
+		this.descriptionn = descriptionn;
+		this.img = img;
+		this.poster = poster;
+		this.titile = titile;
+		this.views = views;
+	}
 }

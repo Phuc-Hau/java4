@@ -1,0 +1,19 @@
+.card-body .border{
+	width: 190px;
+    margin-top: 6px;
+    height: 288px;
+}
+
+.card-body .col-9{
+	max-width: 50%;
+}
+
+.card-body .col-3{
+	max-width: 50%;
+}
+
+.anh{
+	margin-top: 10px;
+    margin-left: 49px;
+    width: 84px;
+}

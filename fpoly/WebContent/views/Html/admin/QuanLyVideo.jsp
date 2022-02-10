@@ -14,6 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fpoly/views/CSS/Qlvideo.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                         </div>
 
                         <div class="nav-item">
-                            <a href="../oe/reports" class="nav-link">
+                            <a href="/fpoly/oe/reports" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
@@ -68,61 +69,70 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade ${showedit}" id="videoEdit" role="tabpanel" aria-labelledby="videoEdit-tab">
+                   
                     <form action="" method="post">
-                        <div class="card">
+                        <div class="card"style="width: 550px;">
 
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3">
                                         <div class="border p-3">
-                                            <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                                            <img src="${videoedit.poster}" alt="" class="img-fluid">
+                                            
                                         </div>
+                                        
+                                        <input class="anh" type="file" name="poster">
                                     </div>
                                     <div class="col-9">
                                         <div class="form-group">
                                             <label for="phimmoiId">Phimmoi ID</label>
-                                            <input ${readonly} type="text" class="form-control" name="phimmoiId" id="phimmoiId"
-                                                aria-describedby="phimmoiIdHid" placeholder="Phimmoi ID">
+                                            <input ${readonly} type="text" name="id"  class="form-control" value="${videoedit.id}"  placeholder="Phimmoi ID">
                                             <small id="phimmoiIdHid" class="form-text text-muted">Phimmoi ID your
                                                 required</small>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="videoTitle">Video Title</label>
-                                            <input type="text" class="form-control" name="videoTitle" id="videoTitle"
-                                                aria-describedby="videoTitleHid" placeholder="Video Title">
+                                            <input type="text" name="titile" class="form-control" value="${videoedit.titile}"   placeholder="Video Title">
                                             <small id="videoTitleHid" class="form-text text-muted">Video Title is
                                                 required</small>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="luotxem">Lượt Xem</label>
-                                            <input type="text" class="form-control" name="luotxem" id="luotxem"
-                                                aria-describedby="luotxemHid" placeholder="Lượt Xem">
+                                            <label for="luotxem">Lượt Xem ${videoedit.views}</label>
+                                            
                                             <small id="luotxemHid" class="form-text text-muted">Lượt Xem </small>
                                         </div>
+                                        
 
+										<c:choose>
+											<c:when test="${videoedit.active}">
+												<c:set var="check" value="checked" scope="page"/>
+											</c:when>
+											<c:otherwise><c:set var="checks" value="checked" scope="page"/></c:otherwise>
+										</c:choose>
+										
                                         <div class="form-check form-check-inline">
-                                            <label><input type="radio" class="form-check-input" value="true"
-                                                    name="status" id="status">Hoạt Động</label>
-                                            <label><input type="radio" class="form-check-input" value="false"
-                                                    name="status" id="status">Không Hoạt Động</label>
+                                            <label><input type="radio" class="form-check-input" value="true" ${check}
+                                                    name="active" id="status">Hoạt Động</label>
+                                            <label><input type="radio" class="form-check-input" value="false" ${checks}
+                                                    name="active" id="status">Không Hoạt Động</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
                                         <label for="description">Ghi Chú</label>
-                                        <textarea name="description" id="description" cols="30" rows="4"
-                                            class="form-control"></textarea>
+                                        <textarea name="descriptionn" id="description"  cols="30" rows="4"
+                                            class="form-control">${videoedit.descriptionn}</textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer text-muted">
-                                <button class="btn btn-primary">Create</button>
-                                <button class="btn btn-warning">Update</button>
-                                <button class="btn btn-danger">Delete</button>
-                                <button class="btn btn-info">Reset</button>
+                                <button formaction="/fpoly/oe/video/edits/create" class="btn btn-primary">Create</button>
+                                <button formaction="/fpoly/oe/video/edits/update" class="btn btn-warning">Update</button>
+                                <button formaction="/fpoly/oe/video/edits/delete" class="btn btn-danger">Delete</button>
+                                <button formaction="/fpoly/oe/video/edits/reset" class="btn btn-info">Reset</button>
                             </div>
                         </div>
                     </form>
@@ -167,12 +177,7 @@
             
         </footer>
         <header class="row pt-5 pb-2">
-            <div class="col-9">
             
-            </div>
-            <div class="col-3 text-right">
-                <img src="../images/avengerposter.jpg" width="100" height="50" alt="" class="mr-4">
-            </div>
         </header>
     </main>
     <!-- Optional JavaScript -->

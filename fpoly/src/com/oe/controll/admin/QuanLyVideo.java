@@ -39,17 +39,20 @@ public class QuanLyVideo extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String  url = request.getRequestURI();
+		
+		
 		if(url.contains("/oe/edit")) {
 			String id =url.replace("/fpoly/oe/edit/", "");
 			try {
+				
 				video = daoVideo.findByID(id);
-				System.out.println(video.getId());
 				request.setAttribute("showedit", "show active");
 				request.setAttribute("edittrue", false);
 				request.setAttribute("activeedit", "active");
 				request.setAttribute("readonly", "readonly");
+				request.setAttribute("videoedit", video);
 			} catch (Exception e) {
-				
+				e.printStackTrace();
 			}
 		}
 		list = daoVideo.findByAll();
