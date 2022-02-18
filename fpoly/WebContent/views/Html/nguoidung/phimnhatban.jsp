@@ -7,6 +7,7 @@
 		<jsp:include page="../card/video.jsp">
 			<jsp:param value="${ite.titile}" name="titile"/>
 			<jsp:param value="${ite.id}" name="id"/>
+			<jsp:param value="${ite.poster}" name="poster"/>
 		</jsp:include>
 	</c:forEach>
 

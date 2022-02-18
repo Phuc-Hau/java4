@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/fpoly/oe/trangchu">Trang Chủ <span class="sr-only">(current)</span></a>
                         </li>
 
                         <div class="nav-item" style="background-color: aqua; border-radius: 27px;">
@@ -130,9 +130,11 @@
                                 <td>Chức Vụ</td>
                                 <td>&nbsp;</td>
                             </tr>
+                            <c:set var="count" value="${0}" scope="request" />
                             <c:forEach var="users" items="${listuser}">
                             	<tr>
-                            		<td> </td>
+                            		<c:set var="count" value="${count+1}" scope="request"/>
+                            		<td> ${count}</td>
 	                                <td>${users.id}</td>
 	                                <td>${users.fullname}</td>
 	                                <td>${users.email}</td>

@@ -34,7 +34,6 @@
 						<div style="display: flex;">
 							<div class="p-2" style="width: 76%; text-align: left;">
                             	<b>${video.titile} </b> </br>
-                            	<b>${video.poster}</b>
 	                        </div>
 	                     
 							<div class="text-right" style="margin-top: 22px;">
@@ -55,7 +54,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 1</div>
@@ -63,7 +62,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 2</div>
@@ -71,7 +70,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 3</div>
@@ -79,7 +78,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 4</div>
@@ -87,7 +86,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 5</div>
@@ -95,7 +94,7 @@
 
                 <div class="row border mt-3 mb-3">
                     <div class="col-2">
-                        <img src="../images/avengerposter.jpg" alt="" class="img-fluid">
+                        <img src="/fpoly/file/${video.poster}" alt="" class="img-fluid">
                     </div>
 
                     <div class="col-10 border-left">Naruto Shippuden Tập 6</div>

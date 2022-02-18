@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
@@ -14,10 +14,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <link rel="stylesheet" href="/fpoly/views/CSS/Qlvideo.css">
+    <script src="/fpoly/views/JS/video.js"></script>
 </head>
 
-<body>
+<body  ng-app="myapp" ng-controller="controller">
     <main class="container-fluid">
         <nav class="row">
             <nav class="navbar navbar-expand-sm navbar-light bg-light col">
@@ -30,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/fpoly/oe/trangchu">Trang Chủ <span class="sr-only">(current)</span></a>
                         </li>
 
                         <div class="nav-item">
@@ -70,72 +72,75 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade ${showedit}" id="videoEdit" role="tabpanel" aria-labelledby="videoEdit-tab">
                    
-                    <form action="" method="post">
-                        <div class="card"style="width: 550px;">
+                     <form name="frm" action="" method="post" enctype="multipart/form-data" onsubmit = "return validateForm()">
+        
+				        <div style="width: 854px;" class="card-body">
+				            <div class="row">
+				                <div class="col-3">
+				                    <div class="border p-3">
+				                        <img src="/fpoly/file/${videoedit.poster}" alt="" class="img-fluid">
+				                        
+				                    </div>
+				                    
+				                    <input value="${videoedit.poster}" class="anh" type="file" name="poster">
+				                    <br>
+				                    <div style="font-size: 25px;margin-top: 34px; color: red; font-weight: bold;  text-align: center;">${mess}</div>
+				                </div>
+				                <div class="col-9">
+				                    <div class="form-group">
+				                        <label for="phimmoiId">Phimmoi ID</label>
+				                        <input ${readonly} type="text" name="id"  class="form-control" value="${videoedit.id}"  placeholder="Phimmoi ID">
+				                        <small id="phimmoiIdHid" class="form-text text-muted">Phimmoi ID your
+				                            required</small>
+				                    </div>
+				
+				                    <div class="form-group">
+				                        <label for="videoTitle">Video Title</label>
+				                        <input type="text" name="titile" class="form-control" value="${videoedit.titile}"   placeholder="Video Title">
+				                        <small id="videoTitleHid" class="form-text text-muted">Video Title is
+				                            required</small>
+				                    </div>
+				
+				                    <div class="form-group">
+				                        <label for="luotxem">Lượt Xem ${videoedit.views}</label>
+				                                  
+				                                  <small id="luotxemHid" class="form-text text-muted">Lượt Xem </small>
+				                              </div>
+				                              
+				
+												<c:choose>
+													<c:when test="${videoedit.active==false}">
+														<c:set var="checks" value="checked" scope="page"/>
+													</c:when>
+													<c:otherwise><c:set var="check" value="checked" scope="page"/></c:otherwise>
+												</c:choose>
+				
+				                              <div class="form-check form-check-inline">
+				                                  <label><input type="radio" class="form-check-input" value="true" ${check}
+				                                name="active" id="status">Hoạt Động</label>
+				                        			<label style="margin-left: 22px;"><input type="radio" class="form-check-input" value="false" ${checks}
+				                                name="active" id="status">Không Hoạt Động</label>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="row">
+				                <div class="col">
+				                    <label for="description">Ghi Chú</label>
+				                    <textarea name="descriptionn" id="description"  cols="30" rows="4"
+				                        class="form-control">${videoedit.descriptionn}</textarea>
+				                </div>
+				            </div>
 
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="border p-3">
-                                            <img src="${videoedit.poster}" alt="" class="img-fluid">
-                                            
-                                        </div>
-                                        
-                                        <input class="anh" type="file" name="poster">
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="form-group">
-                                            <label for="phimmoiId">Phimmoi ID</label>
-                                            <input ${readonly} type="text" name="id"  class="form-control" value="${videoedit.id}"  placeholder="Phimmoi ID">
-                                            <small id="phimmoiIdHid" class="form-text text-muted">Phimmoi ID your
-                                                required</small>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="videoTitle">Video Title</label>
-                                            <input type="text" name="titile" class="form-control" value="${videoedit.titile}"   placeholder="Video Title">
-                                            <small id="videoTitleHid" class="form-text text-muted">Video Title is
-                                                required</small>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="luotxem">Lượt Xem ${videoedit.views}</label>
-                                            
-                                            <small id="luotxemHid" class="form-text text-muted">Lượt Xem </small>
-                                        </div>
-                                        
-
-										<c:choose>
-											<c:when test="${videoedit.active}">
-												<c:set var="check" value="checked" scope="page"/>
-											</c:when>
-											<c:otherwise><c:set var="checks" value="checked" scope="page"/></c:otherwise>
-										</c:choose>
-										
-                                        <div class="form-check form-check-inline">
-                                            <label><input type="radio" class="form-check-input" value="true" ${check}
-                                                    name="active" id="status">Hoạt Động</label>
-                                            <label><input type="radio" class="form-check-input" value="false" ${checks}
-                                                    name="active" id="status">Không Hoạt Động</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="description">Ghi Chú</label>
-                                        <textarea name="descriptionn" id="description"  cols="30" rows="4"
-                                            class="form-control">${videoedit.descriptionn}</textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-muted">
-                                <button formaction="/fpoly/oe/video/edits/create" class="btn btn-primary">Create</button>
-                                <button formaction="/fpoly/oe/video/edits/update" class="btn btn-warning">Update</button>
-                                <button formaction="/fpoly/oe/video/edits/delete" class="btn btn-danger">Delete</button>
-                                <button formaction="/fpoly/oe/video/edits/reset" class="btn btn-info">Reset</button>
-                            </div>
-                        </div>
-                    </form>
+				        </div>
+				        
+					    <div class="card-footer text-muted">
+					        <button formaction="/fpoly/oe/video/edits/create" class="btn btn-primary">Create</button>
+					        <button formaction="/fpoly/oe/video/edits/update" class="btn btn-warning">Update</button>
+					        <button formaction="/fpoly/oe/video/edits/delete" class="btn btn-danger">Delete</button>
+					        <button formaction="/fpoly/oe/video/edits/reset" class="btn btn-info">Reset</button>
+						</div>
+				    </form>
+    
                 </div>
                 <div class="tab-pane fade ${showlist}" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                     <table class="table table-stripe">
@@ -162,8 +167,8 @@
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
 	                            	</form>
 	                                <form style="margin-left: 12px;" action="/fpoly/oe/delete/${video.id}" method="post">
-	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
-	                                </form>
+	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Delete</a>
+	                            	</form>
 	                                
 	                            </td>
 	                        </tr>

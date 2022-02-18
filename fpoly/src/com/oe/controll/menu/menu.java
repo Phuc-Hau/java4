@@ -58,7 +58,7 @@ public class menu extends HttpServlet {
 					+ " <a class=\"dropdown-item\" href=\"../oe/phim\">Đăng Xuất</a>");
 		} else {
 			
-			req.setAttribute("auth", "<a class=\"dropdown-item\" href=\"../oe/dangnhap\">Đăng Nhập</a>\r\n"
+			req.setAttribute("auth", "<a class=\"dropdown-item\" href=\"../oe/d angnhap\">Đăng Nhập</a>\r\n"
 					+ "                <a class=\"dropdown-item\" href=\"../oe/dangky\">Đăng Ký</a>\r\n"
 					+ "               <a class=\"dropdown-item\" href=\"../oe/forgetpass\">Quên Mật Khẩu</a>");
 		}

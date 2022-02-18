@@ -39,8 +39,6 @@ public class QuanLyVideo extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String  url = request.getRequestURI();
-		
-		
 		if(url.contains("/oe/edit")) {
 			String id =url.replace("/fpoly/oe/edit/", "");
 			try {
@@ -55,6 +53,7 @@ public class QuanLyVideo extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		
 		list = daoVideo.findByAll();
 		request.setAttribute("listvideo", list);
 		request.getRequestDispatcher("/views/Html/admin/QuanLyVideo.jsp").forward(request, response);
