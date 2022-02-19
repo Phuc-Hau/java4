@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny" style="margin-bottom: 70px;">
-		<form rel="async" method="post" action="../oe/capcha" onsubmit="" id="u_0_a_VN">
+		<form rel="async" method="post" action="/fpoly/oe/capcha" onsubmit="" id="u_0_a_VN">
 			<div class="mtl mbm ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite" id="initiate_interstitial">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
@@ -43,7 +43,7 @@
 															<div class="marginLeft12px">
 																<div class="_9o1x marginBottom4px" style="margin-left: 30px;">Gửi mã qua email</div>
 																<div class="_9o1y">
-																	<div>p***********2@gmail.com</div>
+																	<div>${email}</div>
 																</div>
 															</div>
 														</label>

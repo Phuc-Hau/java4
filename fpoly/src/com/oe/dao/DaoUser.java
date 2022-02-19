@@ -68,5 +68,12 @@ public class DaoUser extends DaoASM<User, String>{
 		query.setParameter("password", password);
 		return query.getSingleResult();
 	}
+	
+	public User checkEmail(String email){
+		String jqpl = "SELECT u FROM User u WHERE u.email = : email";
+		TypedQuery<User> query = em.createQuery(jqpl,User.class);
+		query.setParameter("email", email);
+		return query.getSingleResult();
+	}
 
 }

@@ -67,4 +67,16 @@ public class mailUntils {
 	public void setbody(String body) {
 		bodyMail = body;
 	}
+
+	public mailUntils(String toMail, String subjectMail, String bodyMail) {
+		super();
+		this.toMail = toMail;
+		this.subjectMail = subjectMail;
+		this.bodyMail = bodyMail;
+	}
+
+	public mailUntils() {
+		super();
+	}
+	
 }

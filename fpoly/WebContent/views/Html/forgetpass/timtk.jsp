@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="_4-u5 _30ny" id="login_help">
-		<form rel="async" id="identify_yourself_flow" action="../oe/forgetmail" method="post" onsubmit="">
+		<form rel="async" id="identify_yourself_flow" action="/fpoly/oe/forgetmail" method="post" onsubmit = "return validateForm()">
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
@@ -32,7 +32,7 @@
 								</tr>
 								<tr>
 									<td>
-										<input type="text" class="inputtext _9o1w" id="identify_email" name="email" placeholder="Email hoặc số di động" autofocus="1" aria-label="Email hoặc số di động">
+										<input type="email" class="inputtext _9o1w" id="identify_email" name="email" placeholder="Email hoặc số di động" autofocus="1" aria-label="Email hoặc số di động">
 									</td>
 								</tr>
 							</tbody>

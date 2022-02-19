@@ -25,11 +25,11 @@
 					<div class="_9nq2 marginBottom20px">Vui lòng kiểm tra mã trong email của bạn. Mã này gồm 6 số.</div>
 					<div class="clearfix">
 						<div class="_9o1z">
-							<input style="margin-top: 3px;" type="text" class="inputtext _9o1w _9o1_" name="n" id="recovery_code_entry" placeholder="Nhập mã" aria-label="Nhập mã">
+							<input style="margin-top: 3px;" type="text" class="inputtext _9o1w _9o1_" name="capcha" id="recovery_code_entry" placeholder="Nhập mã" aria-label="Nhập mã">
 						</div>
 						<div class="_9o1-">
 							<div class="_9o1x marginBottom10px">Chúng tôi đã gửi cho bạn mã đến:</div>
-							<div class="_9o1y"><div>p***********2@gmail.com</div></div>
+							<div class="_9o1y"><div>${email}</div></div>
 						</div>
 					</div>
 					<div class="mvm"></div>
