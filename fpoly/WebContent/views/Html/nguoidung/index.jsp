@@ -90,7 +90,7 @@
                             		
                             			<c:choose>
                             				<c:when test="${sessionScope.user.adminn}">
-                            					<a class="dropdown-item" href="../oe/admin">Đăng Ký</a>
+                            					<a class="dropdown-item" href="../oe/admin">Admin</a>
                             				</c:when>
                             			</c:choose>
                             			<a class="dropdown-item" href="../oe/phim">Đăng Xuất</a>
