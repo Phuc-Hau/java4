@@ -15,7 +15,6 @@ import com.oe.dao.DaoUser;
 import com.oe.dao.DaoVideo;
 import com.oe.entity.User;
 import com.oe.entity.Video;
-import com.oe.untils.Auth;
 
 @WebServlet({"/oe/dangnhap","/oe/login"})
 public class dangnhap extends HttpServlet {
@@ -46,8 +45,10 @@ public class dangnhap extends HttpServlet {
 			try {
 				User tk = daoUser.checkLogin(user.getId(), user.getPasswordd());
 				if( (tk.getId().equals(user.getId()) ) && (tk.getPasswordd().equals(user.getPasswordd())) ) {
-					Auth.user=tk;
+					
+					request.getSession().setAttribute("user", tk);
 					List<Video> list = daoVideo.findByAll();
+					
 					request.setAttribute("video", list);
 					request.setAttribute("trangchu", "lu");
 					request.setAttribute("uri", "../nguoidung/TrangChu.jsp");

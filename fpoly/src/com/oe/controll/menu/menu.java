@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oe.dao.DaoVideo;
 import com.oe.entity.Video;
-import com.oe.untils.Auth;
 
 
 @WebServlet({"/oe/trangchu","/oe/phimnhatban","/oe/phimus&uk","/oe/phimhanquoc","/oe/uathich","/oe/phim"})
@@ -29,7 +28,7 @@ public class menu extends HttpServlet {
 
 		String uri = req.getRequestURI();
 		if(uri.contains("/oe/phim")) {
-			Auth.user=null;
+			req.getSession().setAttribute("user", null);
 		}
 		if(uri.contains("/oe/uathich")) {
 			list = daoVideo.findUaThich();
@@ -51,16 +50,6 @@ public class menu extends HttpServlet {
 		}else {
 			req.setAttribute("uri", "../nguoidung/TrangChu.jsp");
 			req.setAttribute("trangchu", "lu");
-		}
-		
-		if(Auth.isLogin()) {
-			req.setAttribute("auth", "<a class=\"dropdown-item\" href=\"../oe/forgetpass\">Quên Mật Khẩu</a>\r\n"
-					+ " <a class=\"dropdown-item\" href=\"../oe/phim\">Đăng Xuất</a>");
-		} else {
-			
-			req.setAttribute("auth", "<a class=\"dropdown-item\" href=\"../oe/dangnhap\">Đăng Nhập</a>\r\n"
-					+ "                <a class=\"dropdown-item\" href=\"../oe/dangky\">Đăng Ký</a>\r\n"
-					+ "               <a class=\"dropdown-item\" href=\"../oe/forgetpass\">Quên Mật Khẩu</a>");
 		}
 		
 		req.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(req, resp);

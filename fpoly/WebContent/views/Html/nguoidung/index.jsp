@@ -81,7 +81,22 @@
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 Tài Khoản</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            	${auth}
+                            	<c:choose>
+                            		<c:when test="${empty sessionScope.user}">
+                            			<a class="dropdown-item" href="../oe/dangnhap">Đăng Nhập</a>
+				                		<a class="dropdown-item" href="../oe/dangky">Đăng Ký</a>
+                            		</c:when>
+                            		<c:otherwise>
+                            		
+                            			<c:choose>
+                            				<c:when test="${sessionScope.user.adminn}">
+                            					<a class="dropdown-item" href="../oe/admin">Đăng Ký</a>
+                            				</c:when>
+                            			</c:choose>
+                            			<a class="dropdown-item" href="../oe/phim">Đăng Xuất</a>
+                            		</c:otherwise>
+                            	</c:choose>
+                            	<a class="dropdown-item" href="../oe/forgetpass">Quên Mật Khẩu</a>
                             </div>
                         </li>
                     </ul>
