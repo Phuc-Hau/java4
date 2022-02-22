@@ -94,6 +94,7 @@
                             				</c:when>
                             			</c:choose>
                             			<a class="dropdown-item" href="../oe/phim">Đăng Xuất</a>
+                            			<a class="dropdown-item" href="../oe/datpass">Đổi PassWord</a>
                             		</c:otherwise>
                             	</c:choose>
                             	<a class="dropdown-item" href="../oe/forgetpass">Quên Mật Khẩu</a>
