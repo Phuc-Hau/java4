@@ -48,7 +48,7 @@
 					<div class="clearfix">
 						<div class="rfloat _ohf" style="margin-left: 122px">
 							<button formaction="../oe/index" style=" padding: 0px; width: 100px;" class="_42ft _42fu _9nq1 textPadding29px selected _42g-" type="submit" id="skip_button">Hủy</button>
-							<button formaction="../oe/taotaikhoang" value="1" class="_42ft _42fu _9nq0 _9nq023 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Tạo tài khoản mới</button>
+							<button formaction="../oe/taotaikhoan" value="1" class="_42ft _42fu _9nq0 _9nq023 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Tạo tài khoản mới</button>
 						</div>
 						<div class="pts"></div>
 					</div>

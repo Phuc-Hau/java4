@@ -16,7 +16,8 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="Id")
+	@Basic(optional = false)
+	@Column(name="Id" , unique = true , nullable = false)
 	private String id;
 
 	@Column(name="Adminn")
@@ -30,7 +31,7 @@ public class User implements Serializable {
 
 	@Column(name="Passwordd")
 	private String passwordd;
-
+	
 	//bi-directional many-to-one association to Favorite
 	@OneToMany(mappedBy="user")
 	private List<Favorite> favorites;
@@ -126,4 +127,16 @@ public class User implements Serializable {
 		return share;
 	}
 
+	public User(String id, boolean adminn, String email, String fullname, String passwordd, List<Favorite> favorites,
+			List<Share> shares) {
+		super();
+		this.id = id;
+		this.adminn = adminn;
+		this.email = email;
+		this.fullname = fullname;
+		this.passwordd = passwordd;
+		this.favorites = favorites;
+		this.shares = shares;
+	}
+	
 }

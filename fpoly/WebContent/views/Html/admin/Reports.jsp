@@ -31,7 +31,7 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="../oe/nhanvien" class="nav-link">
+                            <a href="../oe/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>

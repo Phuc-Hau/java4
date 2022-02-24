@@ -1,6 +1,5 @@
 
 
-
 import java.io.IOException;
 
 import javax.servlet.DispatcherType;
@@ -20,7 +19,7 @@ public class Myfilter extends HttpFilter implements Filter {
         super();
         // TODO Auto-generated constructor stub
     }
- 
+
 	public void destroy() {
 		// TODO Auto-generated method stub
 	}
