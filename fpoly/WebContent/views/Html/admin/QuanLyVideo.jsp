@@ -34,7 +34,7 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="/fpoly/oe/nhanvien" class="nav-link">
+                            <a href="/fpoly/oe/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
@@ -158,10 +158,10 @@
 	                            	</c:choose>
 	                            </td>
 	                            <td style="display: flex;">
-	                            	<form action="/fpoly/oe/edit/${video.id}" method="post">
+	                            	<form action="/fpoly/oe/video/edit/${video.id}" method="post">
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
 	                            	</form>
-	                                <form style="margin-left: 12px;" action="/fpoly/oe/delete/${video.id}" method="post">
+	                                <form style="margin-left: 12px;" action="/fpoly/oe/video/delete/${video.id}" method="post">
 	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
 	                                </form>
 	                                

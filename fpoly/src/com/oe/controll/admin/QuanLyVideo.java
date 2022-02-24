@@ -15,7 +15,7 @@ import com.oe.dao.DaoVideo;
 import com.oe.entity.Video;
 
 
-@WebServlet({"/oe/QuanLyvideo","/oe/edit/*"})
+@WebServlet({"/oe/QuanLyvideo","/oe/video/edit/*"})
 public class QuanLyVideo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,7 +28,6 @@ public class QuanLyVideo extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		list = daoVideo.findByAll();
 		request.setAttribute("listvideo", list);
-		
 		request.setAttribute("showlist", "show active");
 		request.setAttribute("edittrue", true);
 		request.setAttribute("activelist", "active");
@@ -41,10 +40,9 @@ public class QuanLyVideo extends HttpServlet {
 		String  url = request.getRequestURI();
 		
 		
-		if(url.contains("/oe/edit")) {
-			String id =url.replace("/fpoly/oe/edit/", "");
+		if(url.contains("/oe/video/edit")) {
+			String id =url.replace("/fpoly/oe/video/edit/", "");
 			try {
-				
 				video = daoVideo.findByID(id);
 				request.setAttribute("showedit", "show active");
 				request.setAttribute("edittrue", false);

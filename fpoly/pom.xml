@@ -14,8 +14,6 @@
 	  		<version>7.0</version>
 	  		<scope>provided</scope>
 	  	</dependency>
-	  	
-	  	
 		<dependency>
 	    	<groupId>com.microsoft.sqlserver</groupId>
 	    	<artifactId>mssql-jdbc</artifactId>
@@ -28,26 +26,21 @@
 	    	<version>5.4.27.Final</version>
 	    	<scope>compile</scope>
 	    </dependency>
-	    
 	     <dependency>
 	    	<groupId>org.hibernate</groupId>
 	    	<artifactId>hibernate-entitymanager</artifactId>
 	    	<version>5.4.27.Final</version>
-	    </dependency>
-	    
+	    </dependency>   
 	    <dependency>
 	    	<groupId>org.hibernate.validator</groupId>
 	    	<artifactId>hibernate-validator</artifactId>
 	    	<version>7.0.0.Final</version>
 	    </dependency>
-	    
-	
 		<dependency>
 	    	<groupId>org.apache.logging.log4j</groupId>
 	    	<artifactId>log4j-slf4j-impl</artifactId>
 	    	<version>2.1</version>
 	    </dependency>
-		
 	  	<dependency>
 	  		<groupId>commons-beanutils</groupId>
 	  		<artifactId>commons-beanutils</artifactId>
@@ -59,7 +52,6 @@
 	    	<artifactId>jstl</artifactId>
 	    	<version>1.2</version>
 		</dependency>
-		
 		<dependency>
 		  	<groupId>javax.activation</groupId>
 	    	<artifactId>activation</artifactId>

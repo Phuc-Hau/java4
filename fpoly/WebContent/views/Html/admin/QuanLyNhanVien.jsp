@@ -29,17 +29,17 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/fpoly/oe/trangchu">Trang Chủ <span class="sr-only">(current)</span></a>
                         </li>
 
                         <div class="nav-item" style="background-color: aqua; border-radius: 27px;">
-                            <a href="" class="nav-link">
+                            <a href="/fpoly/oe/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
 
                         <div class="nav-item">
-                            <a href="../oe/reports" class="nav-link">
+                            <a href="/fpoly/oe/reports" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
@@ -73,13 +73,12 @@
                         aria-labelledby="videoEdit-tab">
                         <form action="" method="post">
                             <div class="card">
-
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="username">Username</label>
-                                                <input type="text" class="form-control" name="username" id="username"
+                                                <input type="text" value="${useredit.id}" class="form-control" name="id" id="idd"
                                                     aria-describedby="usernameHid" placeholder="Username">
                                                 <small id="usernameHid" class="form-text text-muted">Username is
                                                     required</small>
@@ -87,7 +86,7 @@
 
                                             <div class="form-group">
                                                 <label for="fullname">Fullname</label>
-                                                <input type="text" class="form-control" name="fullname" id="fullname"
+                                                <input type="text" value="${useredit.fullname}" class="form-control" name="fullname" id="fullname"
                                                     aria-describedby="fullnameHid" placeholder="Fullname">
                                                 <small id="fullnameHid" class="form-text text-muted">Fullname is
                                                     required</small>
@@ -96,14 +95,14 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="password">Password</label>
-                                                <input type="password" class="form-control" name="password"
-                                                    id="password" aria-describedby="passwordHid" placeholder="Password">
+                                                <input type="password" value="${useredit.passwordd}" class="form-control" name="passwordd"
+                                                    id="passwordd" aria-describedby="passwordHid" placeholder="Password">
                                                 <small id="passwordHid" class="form-text text-muted">Password is
                                                     required</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">Email</label>
-                                                <input type="text" class="form-control" name="email" id="email"
+                                                <input type="text" value="${useredit.email}" class="form-control" name="email" id="email"
                                                     aria-describedby="emailHid" placeholder="Email">
                                                 <small id="emailHid" class="form-text text-muted">Email is
                                                     required</small>
@@ -112,15 +111,15 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
-                                    <button class="btn btn-primary">Create</button>
-                                    <button class="btn btn-warning">Update</button>
-                                    <button class="btn btn-danger">Delete</button>
-                                    <button class="btn btn-info">Reset</button>
+                                    <button formaction="/fpoly/oe/user/edits/create" class="btn btn-primary">Create</button>
+                                    <button formaction="/fpoly/oe/user/edits/update" class="btn btn-warning">Update</button>
+                                    <button formaction="/fpoly/oe/user/edits/delete" class="btn btn-danger">Delete</button>
+                                    <button formaction="/fpoly/oe/user/edits/reset" class="btn btn-info">Reset</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
+                    <div class="tab-pane fade${showuseredit}" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                         <table class="table table-stripe">
                             <tr style="background-color: antiquewhite;">
                             	<td>STT</td>
@@ -130,21 +129,25 @@
                                 <td>Chức Vụ</td>
                                 <td>&nbsp;</td>
                             </tr>
-                            <c:forEach var="users" items="${listuser}">
+                            <c:forEach var="user" items="${listuser}">
                             	<tr>
                             		<td> </td>
-	                                <td>${users.id}</td>
-	                                <td>${users.fullname}</td>
-	                                <td>${users.email}</td>
+	                                <td>${user.id}</td>
+	                                <td>${user.fullname}</td>
+	                                <td>${user.email}</td>
 	                                <td>
 	                                	<c:choose>
-	                                		<c:when test="${users.adminn}">Quản Lý</c:when>
-	                                		<c:when test="${users.adminn}">Người dùng</c:when>
+	                                		<c:when test="${user.adminn}">Quản Lý</c:when>
+	                                		<c:otherwise>Người Dùng</c:otherwise>
 	                                	</c:choose>
 	                                </td>
 	                                <td>
-	                                    <a href=""><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
-	                                    <a href=""><i class="fa fa-trash" aria-hidden="true">  Delete</i></a>
+	                                <form action="../oe/user/edit/${user.id}" method="post">
+	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
+	                                </form>
+	                                <form action="../oe/user/delete/${user.id}" method="post">
+	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
+	                                </form>
 	                                </td>
                            		</tr>
                             </c:forEach>
@@ -164,6 +167,7 @@
             <div class="col-3 text-right">
                 <img src="../images/avengerposter.jpg" width="100" height="50" alt="" class="mr-4">
             </div>
+            <h2>${message}</h2>
         </header>
     </main>
     <!-- Optional JavaScript -->
