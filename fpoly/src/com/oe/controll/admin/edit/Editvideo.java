@@ -21,7 +21,7 @@ import com.oe.entity.Video;
 
 
 @MultipartConfig
-@WebServlet("/oe/video/edits/*")
+@WebServlet("/admin/video/edits/*")
 public class Editvideo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -38,8 +38,10 @@ public class Editvideo extends HttpServlet {
 
 		request.setAttribute("readonly", "readonly");
 		try {
-			video  = daoVideo.findByID(request.getParameter("id"));
-			views = video.getViews();
+			if(!url.contains("/admin/video/edits/create")){
+				video  = daoVideo.findByID(request.getParameter("id"));
+				views = video.getViews();
+			}
 			BeanUtils.populate(video, request.getParameterMap());
 			
 		} catch (Exception e) {
@@ -50,13 +52,13 @@ public class Editvideo extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		File  dir =new File(request.getServletContext().getRealPath("/file"));
 		if(!dir.exists()) {
 			dir.mkdirs();
 		}	
+		
 		try {
-			Part photo =request.getPart("poster");
+			Part photo =request.getPart("posters");
 			File photoFile = new File(dir,photo.getSubmittedFileName());
 			photo.write(photoFile.getAbsolutePath());
 			video.setPoster(photoFile.getName());
@@ -65,15 +67,17 @@ public class Editvideo extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		if(url.contains("/oe/video/edits/create")) {
+		System.out.println(video.getPoster());
+		if(url.contains("/admin/video/edits/create")) {
 			try {
+				video.setViews(0);
 				daoVideo.create(video);
 				request.setAttribute("mess", "Thêm thành công");
 			} catch (Exception e) {
 				request.setAttribute("mess", "Thêm thất bại");
 				e.printStackTrace();
 			}
-		} else if(url.contains("/oe/video/edits/update")) {
+		} else if(url.contains("/admin/video/edits/update")) {
 			video.setViews(views);
 			try {
 				daoVideo.update(video);
@@ -82,7 +86,7 @@ public class Editvideo extends HttpServlet {
 				request.setAttribute("mess", "Cập nhật thất bại");
 				e.printStackTrace();
 			}
-		} else if(url.contains("/oe/video/edits/delete")) {
+		} else if(url.contains("/admin/video/edits/delete")) {
 			try {
 				daoVideo.delete(video.getId());
 				request.setAttribute("mess", "Xóa thành công");

@@ -135,7 +135,7 @@
                             	<tr>
 
                             		<c:set var="count" value="${count+1}" scope="request"/>
-                            		<td> ${count}</td>
+                            		<td>${count}</td>
 	                                <td>${users.id}</td>
 	                                <td>${users.fullname}</td>
 	                                <td>${users.email}</td>

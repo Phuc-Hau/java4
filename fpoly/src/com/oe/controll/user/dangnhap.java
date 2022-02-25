@@ -3,6 +3,7 @@ package com.oe.controll.user;
 import java.io.IOException;
 import java.util.List;
 
+import javax.enterprise.inject.New;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +17,7 @@ import com.oe.dao.DaoVideo;
 import com.oe.entity.User;
 import com.oe.entity.Video;
 
-@WebServlet({"/oe/dangnhap","/oe/login"})
+@WebServlet({"/oe/dangnhap","/oe/login","/oe/dangxuat"})
 public class dangnhap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,6 +29,16 @@ public class dangnhap extends HttpServlet {
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String uri = request.getRequestURI();
+		
+		if(uri.contains("/oe/dangxuat")) {
+			user =new User();
+			request.getSession().setAttribute("user", user);
+			request.setAttribute("video", list);
+			request.setAttribute("trangchu", "lu");
+			request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
+			request.getRequestDispatcher("/oe/trangchu").forward(request, response);
+		} else
 		request.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(request, response);
 	}
 

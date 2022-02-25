@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="nav-item">
-                            <a href="/fpoly/oe/reports" class="nav-link">
+                            <a href="/fpoly/admin/reports" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
@@ -72,17 +72,19 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade ${showedit}" id="videoEdit" role="tabpanel" aria-labelledby="videoEdit-tab">
                    
-                     <form name="frm" action="" method="post" enctype="multipart/form-data" onsubmit = "return validateForm()">
+                     <form name="frm" action=""  enctype="multipart/form-data" method="post" onsubmit = "return validateForm()">
         
 				        <div style="width: 854px;" class="card-body">
 				            <div class="row">
 				                <div class="col-3">
 				                    <div class="border p-3">
-				                        <img src="/fpoly/file/${videoedit.poster}" alt="" class="img-fluid">
+				                        <img src="/fpoly/file/${videoedit.poster}" id="img" alt="" class="img-fluid">
 				                        
 				                    </div>
+				                    <from  enctype="multipart/form-data" >
+				                    	<input value="${videoedit.poster}" id="anh" onclick="img" class="anh" type="file" name="posters">
+				                    </from>
 				                    
-				                    <input value="${videoedit.poster}" class="anh" type="file" name="poster">
 				                    <br>
 				                    <div style="font-size: 25px;margin-top: 34px; color: red; font-weight: bold;  text-align: center;">${mess}</div>
 				                </div>
@@ -134,10 +136,10 @@
 				        </div>
 				        
 					    <div class="card-footer text-muted">
-					        <button formaction="/fpoly/oe/video/edits/create" class="btn btn-primary">Create</button>
-					        <button formaction="/fpoly/oe/video/edits/update" class="btn btn-warning">Update</button>
-					        <button formaction="/fpoly/oe/video/edits/delete" class="btn btn-danger">Delete</button>
-					        <button formaction="/fpoly/oe/video/edits/reset" class="btn btn-info">Reset</button>
+					        <button formaction="/fpoly/admin/video/edits/create" class="btn btn-primary">Create</button>
+					        <button formaction="/fpoly/admin/video/edits/update" class="btn btn-warning">Update</button>
+					        <button formaction="/fpoly/admin/video/edits/delete" class="btn btn-danger">Delete</button>
+					        <button formaction="/fpoly/admin/video/edits/reset" class="btn btn-info">Reset</button>
 						</div>
 				    </form>
     
@@ -163,11 +165,11 @@
 	                            	</c:choose>
 	                            </td>
 	                            <td style="display: flex;">
-	                            	<form action="/fpoly/oe/video/edit/${video.id}" method="post">
+	                            	<form action="/fpoly/admin/video/edit/${video.id}" method="post">
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
 	                            	</form>
 
-	                                <form style="margin-left: 12px;" action="/fpoly/oe/delete/${video.id}" method="post">
+	                                <form style="margin-left: 12px;" action="/fpoly/admin/delete/${video.id}" method="post">
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Delete</a>
 	                            	</form>
 

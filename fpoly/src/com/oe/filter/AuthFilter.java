@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oe.entity.*;
 
-@WebFilter(filterName = "/AuthFilter",urlPatterns = {"/au"})
+@WebFilter(filterName = "/AuthFilter",urlPatterns = {"/admin/*"})
 public class AuthFilter  implements com.oe.filter.HttpFilter{
 
 	@Override
@@ -19,15 +19,16 @@ public class AuthFilter  implements com.oe.filter.HttpFilter{
 		String uri = req.getRequestURI();
 		User user = (User) req.getSession().getAttribute("user");
 		String error ="";
+
 		if(user == null) {
-			error = res.encodeURL("Vui long dang nhap");
+			System.out.println("tren");
+			req.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(req, res);
 		} else if(!user.getAdminn() &&  uri.contains("/admin")) {
-			error = res.encodeURL("Vui long dang nhap vai tro admin");
+			req.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(req, res);
 		}
 		
 		if(!error.isEmpty()) {
-			req.getSession().setAttribute("securi", uri);
-			res.sendRedirect(""+res.encodeRedirectURL(error));
+
 		} else {
 			chain.doFilter(req, res);
 		}

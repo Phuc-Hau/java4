@@ -51,7 +51,6 @@ public class menu extends HttpServlet {
 			req.setAttribute("uri", "../nguoidung/TrangChu.jsp");
 			req.setAttribute("trangchu", "lu");
 		}
-		
 		req.getRequestDispatcher("/views/Html/nguoidung/index.jsp").forward(req, resp);
 	}
 }

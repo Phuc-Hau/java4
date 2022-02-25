@@ -31,7 +31,7 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="../oe/QLnhanvien" class="nav-link">
+                            <a href="/fpoly/oe/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
@@ -43,7 +43,7 @@
                         </div>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../oe/QuanLyvideo"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
+                            <a class="nav-link" href="/fpoly/admin/QuanLyvideo"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
                         </li>
 
                     </ul>

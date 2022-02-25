@@ -82,22 +82,22 @@
                                 Tài Khoản</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                             	<c:choose>
-                            		<c:when test="${empty sessionScope.user}">
-                            			<a class="dropdown-item" href="../oe/dangnhap">Đăng Nhập</a>
-				                		<a class="dropdown-item" href="../oe/dangky">Đăng Ký</a>
+                            		<c:when test="${empty sessionScope.user.id}">
+                            			<a class="dropdown-item" href="/fpoly/oe/dangnhap">Đăng Nhập</a>
+				                		<a class="dropdown-item" href="/fpoly/oe/dangky">Đăng Ký</a>
                             		</c:when>
                             		<c:otherwise>
                             		
                             			<c:choose>
                             				<c:when test="${sessionScope.user.adminn}">
-                            					<a class="dropdown-item" href="../oe/admin">Admin</a>
+                            					<a class="dropdown-item" href="/fpoly/admin/report">Admin</a>
                             				</c:when>
                             			</c:choose>
-                            			<a class="dropdown-item" href="../oe/phim">Đăng Xuất</a>
-                            			<a class="dropdown-item" href="../oe/datpass">Đổi PassWord</a>
+                            			<a class="dropdown-item" href="/fpoly/oe/dangxuat">Đăng Xuất</a>
+                            			<a class="dropdown-item" href="/fpoly/oe/datpass">Đổi PassWord</a>
                             		</c:otherwise>
                             	</c:choose>
-                            	<a class="dropdown-item" href="../oe/forgetpass">Quên Mật Khẩu</a>
+                            	<a class="dropdown-item" href="/fpoly/oe/forgetpass">Quên Mật Khẩu</a>
                             </div>
                         </li>
                     </ul>
