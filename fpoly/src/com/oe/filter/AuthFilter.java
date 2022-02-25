@@ -1,4 +1,4 @@
- package com.poly.filter;
+ package com.oe.filter;
 
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.oe.entity.*;
 
 @WebFilter(filterName = "/AuthFilter",urlPatterns = {"/au"})
-public class AuthFilter  implements com.poly.filter.HttpFilter{
+public class AuthFilter  implements com.oe.filter.HttpFilter{
 
 	@Override
 	public void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
