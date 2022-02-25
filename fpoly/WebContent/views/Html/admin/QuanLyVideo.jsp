@@ -82,10 +82,16 @@
 				                        
 				                    </div>
 				                    <from  enctype="multipart/form-data" >
-				                    	<input value="${videoedit.poster}" id="anh" onclick="img" class="anh" type="file" name="posters">
+				                    	<input value="${videoedit.poster}" id="anh" onchange="img4()" class="anh" type="file" name="posters">
 				                    </from>
-				                    
-				                    <br>
+									<script>
+										function img4() {
+											var anh = document.getElementById("anh").value;
+											var h = document.getElementById("img");
+											h.src = "C:\Users\fptshop\Pictures\Screenshots\Ảnh chụp màn hình (1).png";
+										}
+									</script>
+									<br>
 				                    <div style="font-size: 25px;margin-top: 34px; color: red; font-weight: bold;  text-align: center;">${mess}</div>
 				                </div>
 				                <div class="col-9">
