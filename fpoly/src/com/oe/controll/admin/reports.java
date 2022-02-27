@@ -32,7 +32,7 @@ public class reports extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		 
 		try {
 			
 			StoredProcedureQuery query = em.createStoredProcedureQuery("Report.favoriteByYear");
