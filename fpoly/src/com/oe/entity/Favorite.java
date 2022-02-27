@@ -2,23 +2,24 @@ package com.oe.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.Date;
 
 
-/**
- * The persistent class for the Favorite database table.
- * 
- */
 @Entity
+@Table(name = "Favorite",uniqueConstraints = {
+		@UniqueConstraint(columnNames = {"VideoId" ,"UserID"})
+})
 @NamedQuery(name="Favorite.findAll", query="SELECT f FROM Favorite f")
 public class Favorite implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Id")
 	private int id;
 
 	@Column(name="LikeDate")
-	private String likeDate;
+	@Temporal(TemporalType.DATE)
+	Date likeDate =new Date();
 
 	//bi-directional many-to-one association to User
 	@ManyToOne
@@ -41,12 +42,18 @@ public class Favorite implements Serializable {
 		this.id = id;
 	}
 
-	public String getLikeDate() {
-		return this.likeDate;
+	
+
+	public Date getLikeDate() {
+		return likeDate;
 	}
 
-	public void setLikeDate(String likeDate) {
+	public void setLikeDate(Date likeDate) {
 		this.likeDate = likeDate;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public User getUser() {

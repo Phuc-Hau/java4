@@ -10,6 +10,7 @@
 		<class>com.oe.entity.Share</class>
 		<class>com.oe.entity.User</class>
 		<class>com.oe.entity.Video</class>
+		<class>com.oe.entity.Report</class>
 		<properties>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>

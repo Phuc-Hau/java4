@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 
@@ -79,13 +81,17 @@
                                 <td>Ngày Cuối Cùng</td>
                                 <td>Cũ Nhất</td>
                             </tr>
-                            <tr>
-                                <td>Naruto Shippuden Tập 1</td>
-                                <td>1000</td>
-                                <td>16/03/2002</td>
-                                <td>16/03/2022</td>
-                            </tr>
-                        </table>
+                            
+							<c:forEach var="item" items="${thongkeFavorite}">
+								<tr>
+									<th>${item.group}</th>
+									<th>${item.likes}</th>
+									<th>${item.newest}</th>
+									<th>${item.oldest}</th>
+
+								</tr>
+							</c:forEach>
+						</table>
                     </div>
 
 
@@ -99,10 +105,9 @@
                                             <lable>
                                                 VideoTitle
                                                 <select name="" id="" class="form-control ml-3">
-                                                    <option value="">Naruto Shippuden Tập 1</option>
-                                                    <option value="">Naruto Shippuden Tập 2</option>
-                                                    <option value="">Naruto Shippuden Tập 3</option>
-                                                    <option value="">Naruto Shippuden Tập 4</option>
+                                                    <c:forEach var="title" items="videoID">
+                                                     	<option value="">lo</option>
+                                                    </c:forEach>
                                                 </select>
                                             </lable>
                                             <button class="btn btn-info ml-2">Reports</button>
@@ -119,12 +124,15 @@
                                             <td>Email</td>
                                             <td>Ngày Yêu Thích</td>
                                         </tr>
-                                        <tr>
-                                            <td>PS15500</td>
-                                            <td>Nguyễn Thanh Tâm</td>
-                                            <td>tamnt1603@gmail.com</td>
-                                            <td>18/03/2022</td>
-                                        </tr>
+                                        <c:forEach var="users" items="">
+											<tr>
+												<th>${users.id}</th>
+												<th>${users.fullname}</th>
+												<th>${users.email}</th>
+												<th>${users.Favorite.likeDate}</th>
+											</tr>
+										</c:forEach>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -180,9 +188,6 @@
         <header class="row pt-5 pb-2">
             <div class="col-9">
             
-            </div>
-            <div class="col-3 text-right">
-                <img src="../images/avengerposter.jpg" width="100" height="50" alt="" class="mr-4">
             </div>
         </header>
     </main>
