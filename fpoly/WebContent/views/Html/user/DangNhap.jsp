@@ -26,7 +26,7 @@
 					<div>
 						<div class="clearfix">
 							<div class="_9okt olo" >
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="id" placeholder="User Name">
+								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="id" value="id" placeholder="User Name">
 		
 							</div >
 							<div class="_9okt olo">

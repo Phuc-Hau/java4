@@ -1,6 +1,8 @@
 package com.oe.controll.user;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,14 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 import com.oe.dao.DaoUser;
+import com.oe.dao.DaoVideo;
 import com.oe.entity.User;
+import com.oe.entity.Video;
 
 @WebServlet("/oe/doipassid")
 public class DoiPass extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	DaoVideo daoVideo = new DaoVideo();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/Html/user/Doipassword.jsp").forward(request, response);
+		try {
+			request.getRequestDispatcher("/views/Html/user/Doipassword.jsp").forward(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,7 +45,14 @@ public class DoiPass extends HttpServlet {
 				try {
 					user.setPasswordd(cf);
 					daoUser.update(user);
-					request.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(request, response);
+					request.getSession().setAttribute("user", user);
+					
+					List<Video> list = daoVideo.findByAll();
+					
+					request.setAttribute("video", list);
+					request.setAttribute("trangchu", "lu");
+					request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
+					request.getRequestDispatcher("/oe/trangchu").forward(request, response);
 				} catch (Exception e) {			
 					doGet(request, response);
 				}

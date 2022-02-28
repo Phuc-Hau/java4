@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oe.entity.*;
 
-@WebFilter(filterName = "/AuthFilter",urlPatterns = {"/admin/*"})
+@WebFilter(filterName = "/AuthFilter",urlPatterns = {"/admin/*","/oe/doipassid"})
 public class AuthFilter  implements com.oe.filter.HttpFilter{
 
 	@Override
