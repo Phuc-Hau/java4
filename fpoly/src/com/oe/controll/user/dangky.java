@@ -18,7 +18,7 @@ import com.oe.entity.User;
 public class dangky extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
+   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.getRequestDispatcher("/views/Html/user/DangKy.jsp").forward(request, response);
