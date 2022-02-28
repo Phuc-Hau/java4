@@ -21,7 +21,7 @@ import com.oe.entity.Video;
 
  
 @MultipartConfig
-@WebServlet("/admin/video/edits/*")
+@WebServlet({"/admin/video/edits/*","/admin/delete/*"})
 public class Editvideo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -43,7 +43,7 @@ public class Editvideo extends HttpServlet {
 				views = video.getViews();
 			}
 			BeanUtils.populate(video, request.getParameterMap());
-			
+			System.out.println(video.getPoster());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class Editvideo extends HttpServlet {
 			photo.write(photoFile.getAbsolutePath());
 			video.setPoster(photoFile.getName());
 		} catch (Exception e) {
-			video.setPoster("Không có ảnh");
+			video.setPoster(request.getParameter("poster"));
 			e.printStackTrace();
 		}
 		
@@ -94,7 +94,15 @@ public class Editvideo extends HttpServlet {
 				e.printStackTrace();
 				request.setAttribute("mess", "Xóa thất bại");
 			}
-		} else {
+		}else if(url.contains("/admin/delete/")) {
+			try {
+				daoVideo.delete(request.getParameter("oid"));
+				request.setAttribute("mess", "Xóa thành công");
+			} catch (Exception e) {
+				e.printStackTrace();
+				request.setAttribute("mess", "Xóa thất bại");
+			}
+		}else {
 
 			request.setAttribute("readonly", "");
 			video = new Video();

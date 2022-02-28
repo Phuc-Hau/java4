@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="nav-item">
-                            <a href="/fpoly/oe/reports" class="nav-link">
+                            <a href="/fpoly/oe/report" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>

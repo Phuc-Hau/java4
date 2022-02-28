@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="nav-item">
-                            <a href="/fpoly/admin/reports" class="nav-link">
+                            <a href="/fpoly/admin/report" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
@@ -56,11 +56,23 @@
                 </div>
             </nav>
         </nav>
-        <section class="row">
+		<c:choose>
+			<c:when test="${!readonly.equals('readonly')}">
+				<c:set var="disabledin" value="${'disabled'}" scope="request" />
+				<c:set var="disabled" value="${''}" scope="request" />
+				<c:set var="tab" value="${'New Video'}" scope="request" />
+			</c:when>
+			<c:otherwise>
+				<c:set var="disabled" value="${'disabled'}" scope="request" />
+				<c:set var="disabledin" value="${''}" scope="request" />
+				<c:set var="tab" value="${'Edit Video'}" scope="request" />
+			</c:otherwise>
+		</c:choose>
+		<section class="row">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link ${activeedit}" id="videoEdit-tab" data-toggle="tab" href="#videoEdit" role="tab"
-                        aria-controls="videoEdit" aria-selected="${!edittrue}">Edit Video</a>
+                        aria-controls="videoEdit" aria-selected="${!edittrue}">${tab}</a>
                 </li>
 
                 <li class="nav-item" role="presentation">
@@ -82,6 +94,7 @@
 				                        
 				                    </div>
 				                    <from  enctype="multipart/form-data" >
+				                 	   <input value="${videoedit.poster}" id="anh"  class="anh" type="hidden" name="poster">
 				                    	<input value="${videoedit.poster}" id="anh" onchange="img4()" class="anh" type="file" name="posters">
 				                    </from>
 									<script>
@@ -142,9 +155,11 @@
 				        </div>
 				        
 					    <div class="card-footer text-muted">
-					        <button formaction="/fpoly/admin/video/edits/create" class="btn btn-primary">Create</button>
-					        <button formaction="/fpoly/admin/video/edits/update" class="btn btn-warning">Update</button>
-					        <button formaction="/fpoly/admin/video/edits/delete" class="btn btn-danger">Delete</button>
+					   
+					   
+					        <button ${disabled}  formaction="/fpoly/admin/video/edits/create" class="btn btn-primary">Create</button>
+					        <button ${disabledin} formaction="/fpoly/admin/video/edits/update" class="btn btn-warning">Update</button>
+					        <button ${disabledin} formaction="/fpoly/admin/video/edits/delete" class="btn btn-danger">Delete</button>
 					        <button formaction="/fpoly/admin/video/edits/reset" class="btn btn-info">Reset</button>
 						</div>
 				    </form>
@@ -153,14 +168,17 @@
                 <div class="tab-pane fade ${showlist}" id="videoList" role="tabpanel" aria-labelledby="videoList-tab">
                     <table class="table table-stripe">
                         <tr style="background-color: antiquewhite;">
+                        	<td>STT</td>
                             <td>Phimmoi ID</td>
                             <td>Video Title</td>
                             <td>Lượt Xem</td>
                             <td>Trạng Thái</td>
                             <td>Edit</td>
                         </tr>
+                        <c:set var="count" value="${1}" scope="request"/>
                         <c:forEach var="video" items="${listvideo}">
                         	<tr>
+                        		<td>${count}</td>
 	                            <td>${video.id}</td>
 	                            <td>${video.titile}</td>
 	                            <td>${video.views}</td>
@@ -175,7 +193,7 @@
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Edit</a>
 	                            	</form>
 
-	                                <form style="margin-left: 12px;" action="/fpoly/admin/delete/${video.id}" method="post">
+	                                <form style="margin-left: 12px;" action="/fpoly/admin/delete/?oid=${video.id}" method="post">
 	                            		<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>    Delete</a>
 	                            	</form>
 
@@ -183,7 +201,7 @@
 	                                
 	                            </td>
 	                        </tr>
-                        	
+                        	<c:set var="count" value="${count+1}" scope="request"/>
                         </c:forEach>
                     </table>
                 </div>

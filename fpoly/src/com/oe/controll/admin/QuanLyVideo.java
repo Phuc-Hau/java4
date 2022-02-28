@@ -30,6 +30,7 @@ public class QuanLyVideo extends HttpServlet {
 		request.setAttribute("showlist", "show active");
 		request.setAttribute("edittrue", true);
 		request.setAttribute("activelist", "active");
+		
 		try {
 			request.getRequestDispatcher("/views/Html/admin/QuanLyVideo.jsp").forward(request, response);
 		} catch (Exception e) {

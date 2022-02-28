@@ -64,6 +64,8 @@ public class dangnhap extends HttpServlet {
 					request.setAttribute("trangchu", "lu");
 					request.setAttribute("uri", "../nguoidung/TrangChu.jsp");
 					request.getRequestDispatcher("/oe/trangchu").forward(request, response);
+				} else {
+					request.getRequestDispatcher("/oe/trangchu").forward(request, response);
 				}
 				
 			} catch (Exception e) {
