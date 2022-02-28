@@ -22,7 +22,7 @@ public class QuanLyVideo extends HttpServlet {
 	Video video = new Video();
 	List<Video> list =null;
 	
-	
+	 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		list = daoVideo.findByAll();

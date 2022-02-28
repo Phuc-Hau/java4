@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <title>Title</title>
     <!-- Required meta tags -->
