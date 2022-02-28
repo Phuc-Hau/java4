@@ -22,7 +22,6 @@ public class index extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		Video video = new Video();
 		DaoVideo daoVideo = new DaoVideo();
 		List<Video> list = daoVideo.findByAll();
 		req.setAttribute("video", list);
