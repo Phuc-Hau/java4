@@ -19,7 +19,7 @@ public class QuanLyNhanVien extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	DaoUser daoUser = new DaoUser();
-	User user = new User();
+	User user = new User(); 
 	List<User> list = null;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
