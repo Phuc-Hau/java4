@@ -38,17 +38,16 @@
 							</div>
 							<div> 
 								<div class="_9okt olo" >
-									<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="NewPassword" placeholder="New Password">
+									<input style="margin-top: 0px; border: none" type="password" class="yu inputtext _55r1 _9oku _9o1w" name="NewPassword" placeholder="New Password">
 								
 								</div >
 								<div class="_9okt olo">
 									<input style="margin-top: 0px; border: none" type="password" class="yu inputtext _55r1 _9oku _9o1w" name="ConfirmPassword" placeholder="Confirm Password">
 									
+									
 								</div>
-								
+								<div  class="_9okt olo"><span style="color: red">${mess}</span><br></div>
 							</div>
-							<span style="color: red">${mess}</span><br>
-							
 							
 						</div>
 						

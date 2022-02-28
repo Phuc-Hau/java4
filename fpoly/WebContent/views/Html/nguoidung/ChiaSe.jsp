@@ -25,13 +25,13 @@
         </header>
         <section class="row">
             <div class="offset-3 col-6">
-                <form action="" method="post">
+                <form action="../oe/chiase" method="post">
                     <div class="card">
                         <div class="card-header">Send Video</div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="email">Your Friends Email</label>
-                                <input type="text" class="form-control" name="" id="" aria-describedby="emailHelperId"
+                                <input type="text" class="form-control" name="mail" id="" aria-describedby="emailHelperId"
                                     placeholder="Email">
                                 <small id="emailHelperId" class="form-text text-muted">
                                     Nhập Địa Chỉ Email

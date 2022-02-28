@@ -38,7 +38,7 @@
 	                     
 							<div class="text-right" style="margin-top: 22px;">
 		                        <a href="" class="btn btn-success">Like</a>
-		                        <a href="" class="btn btn-info">Share</a>
+		                        <a href="ChiaSe.jsp" class="btn btn-info">Share</a>
 	                    	</div>
 						</div>
                         

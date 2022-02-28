@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<span style="color: red">${erro}</span><br>
 	<div class="_4-u5 _30ny">
 		<form method="post" action="../oe/dangky" onsubmit="" id="u_0_a_oY">
 			<div class="mvl ptm uiInterstitial _9np_ uiInterstitialLarge uiBoxWhite">
@@ -26,15 +27,15 @@
 					<div>
 						<div class="clearfix">
 							<div class="_9okt olo" >
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="user_new" placeholder="User Name">
+								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="id" placeholder="User Name">
 		
 							</div >
 							<div class="_9okt olo">
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="full_new" placeholder="Full Name">
+								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="fullname" placeholder="Full Name">
 								
 							</div>
 							<div class="_9okt olo">
-								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="password_new" placeholder="Password">
+								<input style="margin-top: 0px; border: none" type="text" class="yu inputtext _55r1 _9oku _9o1w" name="passwordd" placeholder="Password">
 								
 							</div>
 							<div class="_9okt olo">

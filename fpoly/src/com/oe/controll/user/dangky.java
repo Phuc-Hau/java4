@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.oe.dao.DaoUser;
 import com.oe.entity.User;
 
 
 @WebServlet("/oe/dangky")
+
 public class dangky extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -25,10 +27,17 @@ public class dangky extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = new User();
+		DaoUser dao = new DaoUser();
+		
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
+			dao.create(user);
+			request.setAttribute("id", user.getId());
+			request.getRequestDispatcher("/views/Html/user/DangNhap.jsp").forward(request, response);
 		} catch (Exception e) {
-			// TODO: handle exception
+			request.setAttribute("erro","");
+			e.printStackTrace();
+			
 		}
 	}
 
