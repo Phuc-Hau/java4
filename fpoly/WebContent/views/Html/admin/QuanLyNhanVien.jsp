@@ -131,7 +131,7 @@
                             </tr>
 
                             <c:set var="count" value="${0}" scope="request" />
-                            <c:forEach var="user" items="${listuser}">
+                            <c:forEach var="users" items="${listuser}">
                             	<tr>
 
                             		<c:set var="count" value="${count+1}" scope="request"/>
@@ -146,10 +146,10 @@
 	                                	</c:choose>
 	                                </td>
 	                                <td>
-	                                <form action="../oe/user/edit/${user.id}" method="post">
+	                                <form action="/fpoly/oe/user/edit/${user.id}" method="post">
 	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
 	                                </form>
-	                                <form action="../oe/user/delete/${user.id}" method="post">
+	                                <form action="/fpoly/oe/user/delete/${user.id}" method="post">
 	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
 	                                </form>
 	                                </td>
