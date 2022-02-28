@@ -76,20 +76,23 @@
                     <div class="tab-pane fade show active" id="yeuthich" role="tabpanel" aria-labelledby="yeuthich-tab">
                         <table class="table table-borderd mt3">
                             <tr>
+                            	<td>STT</td>
                                 <td>Video Title</td>
                                 <td>Lượt Yêu Thích</td>
                                 <td>Ngày Cuối Cùng</td>
                                 <td>Cũ Nhất</td>
                             </tr>
-                            
+                            <c:set var="countu" value="${1}"></c:set>
 							<c:forEach var="item" items="${thongkeFavorite}">
 								<tr>
+									<th>${countu}</th>
 									<th>${item.group}</th>
 									<th>${item.likes}</th>
 									<th>${item.newest}</th>
 									<th>${item.oldest}</th>
 
 								</tr>
+								<c:set var="countu" value="${countu+1}"></c:set>
 							</c:forEach>
 						</table>
                     </div>
@@ -119,18 +122,22 @@
                                 <div class="col mt-3">
                                     <table class="table table-bordered">
                                         <tr>
-                                            <td>Username</td>
+                                        	<td>STT</td>
+                                            <td>User</td>
                                             <td>Họ Và Tên</td>
                                             <td>Email</td>
                                             <td>Ngày Yêu Thích</td>
                                         </tr>
-                                        <c:forEach var="users" items="">
+                                        <c:set var="count" value="${1}"></c:set>
+                                        <c:forEach var="favorites" items="${favorite}">
 											<tr>
-												<th>${users.id}</th>
-												<th>${users.fullname}</th>
-												<th>${users.email}</th>
-												<th>${users.Favorite.likeDate}</th>
+												<th>${count}</th>
+												<th>${favorites.user.id}</th>
+												<th>${favorites.user.fullname}</th>
+												<th>${favorites.user.email}</th>
+												<th>${favorites.likeDate}</th>
 											</tr>
+											 <c:set var="count" value="${count+1}"></c:set>
 										</c:forEach>
                                         
                                     </table>
@@ -163,17 +170,23 @@
                                 <div class="col mt-3">
                                     <table class="table table-bordered">
                                         <tr>
+                                        	<td>STT</td>
                                             <td>Tên Người Gửi</td>
                                             <td>Email Người Gửi</td>
                                             <td>Email Người Nhận</td>
                                             <td>Ngày Gửi</td>
                                         </tr>
-                                        <tr>
-                                            <td>Nguyễn Thanh Tâm</td>
-                                            <td>tamnt1603@gmail.com</td>
-                                            <td>hayzomoney@gmail.com</td>
-                                            <td>18/01/2022</td>
-                                        </tr>
+                                        <c:set var="counto" value="${1}"></c:set>
+                                         <c:forEach var="shares" items="${share}">
+											<tr>
+												<th>${counto}</th>
+												<th>${shares.user.fullname}</th>
+												<th>${shares.user.email}</th>
+												<th>${shares.emails}</th>
+												<th>${shares.shareDate}</th>
+											</tr>
+											<c:set var="counto" value="${counto+1}"></c:set>
+										</c:forEach>
                                     </table>
                                 </div>
                             </div>

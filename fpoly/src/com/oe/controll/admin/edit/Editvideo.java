@@ -35,7 +35,11 @@ public class Editvideo extends HttpServlet {
 		List<Video> list =null;
 		
 		int views=0;
-
+		
+		request.setAttribute("showedit", "show active");
+		request.setAttribute("edittrue", false);
+		request.setAttribute("activeedit", "active");
+		request.setAttribute("videoedit", video);
 		request.setAttribute("readonly", "readonly");
 		try {
 			if(!url.contains("/admin/video/edits/create")){
@@ -56,18 +60,16 @@ public class Editvideo extends HttpServlet {
 		if(!dir.exists()) {
 			dir.mkdirs();
 		}	
-		
-		try {
-			Part photo =request.getPart("posters");
-			File photoFile = new File(dir,photo.getSubmittedFileName());
-			photo.write(photoFile.getAbsolutePath());
-			video.setPoster(photoFile.getName());
-		} catch (Exception e) {
-			video.setPoster(request.getParameter("poster"));
-			e.printStackTrace();
+		if(!url.contains("/admin/video/edits/reset")) {
+			try {
+				Part photo =request.getPart("posters");
+				File photoFile = new File(dir,photo.getSubmittedFileName());
+				photo.write(photoFile.getAbsolutePath());
+				video.setPoster(photoFile.getName());
+			} catch (Exception e) {
+				video.setPoster(request.getParameter("poster"));
+			}
 		}
-		
-		System.out.println(video.getPoster());
 		if(url.contains("/admin/video/edits/create")) {
 			try {
 				video.setViews(0);
@@ -90,6 +92,8 @@ public class Editvideo extends HttpServlet {
 			try {
 				daoVideo.delete(video.getId());
 				request.setAttribute("mess", "Xóa thành công");
+				request.setAttribute("readonly", "");
+				video = new Video();
 			} catch (Exception e) {
 				e.printStackTrace();
 				request.setAttribute("mess", "Xóa thất bại");
@@ -103,16 +107,11 @@ public class Editvideo extends HttpServlet {
 				request.setAttribute("mess", "Xóa thất bại");
 			}
 		}else {
-
 			request.setAttribute("readonly", "");
 			video = new Video();
 		}
-		
 
-		request.setAttribute("showedit", "show active");
-		request.setAttribute("edittrue", false);
-		request.setAttribute("activeedit", "active");
-		request.setAttribute("videoedit", video);
+		
 		
 		list = daoVideo.findByAll();
 		request.setAttribute("listvideo", list);
