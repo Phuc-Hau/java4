@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
     <title>Quản lý video</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
