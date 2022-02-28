@@ -15,48 +15,50 @@ import com.oe.dao.DaoUser;
 import com.oe.entity.User;
 
 
-@WebServlet({"/Edituser","/oe/user/edits/*"})
+@WebServlet({"/Edituser","/admin/user/edits/*"})
 public class Edituser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	DaoUser daoUser = new DaoUser();
-	User user = new User();
-	List<User> list = null;
+	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		DaoUser daoUser = new DaoUser();
+		User user = new User();
+		List<User> list = null;
 		String  url = request.getRequestURI();
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
+			User u =daoUser.findByID(user.getId());
+			user.setAdminn(u.getAdminn());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		
-			if(url.contains("/oe/user/edits/create")) {
+			if(url.contains("/admin/user/edits/create")) {
 				try {
 					daoUser.create(user);
 					request.setAttribute("message","Thêm thành công");
 				} catch (Exception e) {
-					request.setAttribute("message","Thêm thất bại");
+					request.setAttribute("message","Thêm Thất bại");
 				}
 				
 			}
 			
-			else if(url.contains("/oe/user/edits/update")) {
+			else if(url.contains("/admin/user/edits/update")) {
 				try {
 					daoUser.update(user);
-					request.setAttribute("message","Cập nhật thành công");
+					request.setAttribute("message","cập nhật thành công");
 				} catch (Exception e) {
-					request.setAttribute("message","Cập nhật thất bại");
+					request.setAttribute("message","cập nhật thất bại");
 				}
 				
 			}
 			
-			else if(url.contains("/oe/user/edits/delete")) {
+			else if(url.contains("/admin/user/edits/delete")) {
 				try {
 					daoUser.delete(user.getId());
-					request.setAttribute("message","Xóa thành công");
+					request.setAttribute("message","xóa thành công");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

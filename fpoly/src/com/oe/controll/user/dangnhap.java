@@ -21,18 +21,15 @@ import com.oe.entity.Video;
 public class dangnhap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	DaoUser daoUser = new DaoUser();
-	List<User> list =null;
-	User user = new User();
-	Video video = new Video();
-	DaoVideo daoVideo = new DaoVideo();
+	
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String uri = request.getRequestURI();
-		
+		List<User> list =null;
+		User user = new User();
 		if(uri.contains("/oe/dangxuat")) {
-			user =new User();
+			user = null;
 			request.getSession().setAttribute("user", user);
 			request.setAttribute("video", list);
 			request.setAttribute("trangchu", "lu");
@@ -45,7 +42,11 @@ public class dangnhap extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		DaoUser daoUser = new DaoUser();
+		Video video = new Video();
+		DaoVideo daoVideo = new DaoVideo();
 		String uri = request.getRequestURI();
+		User user = new User();
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
 		} catch (Exception e) {

@@ -1,6 +1,8 @@
 package com.oe.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.*;
 
 
@@ -13,7 +15,7 @@ import javax.persistence.*;
 public class Share implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Id")
 	private int id;
 
@@ -21,7 +23,9 @@ public class Share implements Serializable {
 	private String emails;
 
 	@Column(name="ShareDate")
-	private String shareDate;
+	@Temporal(TemporalType.DATE)
+	Date shareDate =new Date();
+
 
 	//bi-directional many-to-one association to User
 	@ManyToOne
@@ -52,12 +56,17 @@ public class Share implements Serializable {
 		this.emails = emails;
 	}
 
-	public String getShareDate() {
-		return this.shareDate;
+
+	public Date getShareDate() {
+		return shareDate;
 	}
 
-	public void setShareDate(String shareDate) {
+	public void setShareDate(Date shareDate) {
 		this.shareDate = shareDate;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	public User getUser() {

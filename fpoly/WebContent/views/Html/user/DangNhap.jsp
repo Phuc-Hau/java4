@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Đăng nhập</title>
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/l/0,cross/JT8ZJT0WWqH.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="uUdC1OG" crossorigin="anonymous">
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yq/l/0,cross/L0VTH1UsUXD.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="0QQt+vI" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../views/CSS/passmabaomat.css">
+<link rel="stylesheet" type="text/css" href="/fpoly/views/CSS/passmabaomat.css">
 
 </head>
 <body>
@@ -34,10 +34,10 @@
 								
 							</div>
 							<span style="color: red">${mess}</span><br>
-							<button formaction="../oe/login" value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
+							<button formaction="/fpoly/oe/login" value="1" class="sauo _42ft _42fu _9nq0 textPadding20px selected _42g-" id="btn_continue" name="btn_continue" type="submit">Đăng Nhập</button>
 							
 							<div  class="_6ltj">
-								<a href="../oe/forgetmail">Quên mật khẩu?</a>
+								<a href="/fpoly/oe/forgetmail">Quên mật khẩu?</a>
 							</div>
 							
 						</div>

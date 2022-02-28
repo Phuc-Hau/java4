@@ -4,7 +4,7 @@
 <html>
 <head> 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Đổi mật khẩu</title>
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yn/l/0,cross/JT8ZJT0WWqH.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="uUdC1OG" crossorigin="anonymous">
 <link type="text/css" rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v3/yq/l/0,cross/L0VTH1UsUXD.css?_nc_x=Ij3Wp8lg5Kz" data-bootloader-hash="0QQt+vI" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/fpoly/views/CSS/passmabaomat.css">
@@ -18,7 +18,7 @@
 				<div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
 					<div class="clearfix uiHeaderTop">
 						<div>
-							<h2 class="uiHeaderTitle" aria-hidden="true">Đăng Nhập</h2>
+							<h2 class="uiHeaderTitle" aria-hidden="true">Đổi mật khẩu</h2>
 						</div>
 					</div>
 				</div>

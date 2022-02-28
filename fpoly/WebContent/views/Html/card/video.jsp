@@ -16,7 +16,7 @@
 		
         <div class="card-footer">
             <a href="/fpoly/oe/like/${param.id}" class="btn btn-success">Like</a>
-            <a href="/fpoly/oe/share/${param.id}" class="btn btn-info">Share</a>
+            <a href="/fpoly/video/share/?idvideo=${param.id}" class="btn btn-info">Share</a>
         </div>
     </div>
 </div>

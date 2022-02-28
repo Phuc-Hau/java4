@@ -29,23 +29,23 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/fpoly/oe/trangchu">Trang Chủ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/fpoly/admin/trangchu">Trang Chủ <span class="sr-only">(current)</span></a>
                         </li>
 
                         <div class="nav-item" style="background-color: aqua; border-radius: 27px;">
-                            <a href="/fpoly/oe/QLnhanvien" class="nav-link">
+                            <a href="/fpoly/admin/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
 
                         <div class="nav-item">
-                            <a href="/fpoly/oe/report" class="nav-link">
+                            <a href="/fpoly/admin/report" class="nav-link">
                                 <i class="fa fa-comments" aria-hidden="true"></i> Báo Cáo
                             </a>
                         </div>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../oe/QuanLyvideo"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
+                            <a class="nav-link" href="/fpoly/admin/QuanLyvideo"><i class="fa fa-info" aria-hidden="true"></i> Video</a>
                         </li>
 
                     </ul>
@@ -58,8 +58,8 @@
             <div class="col mt-4">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="videoEdit-tab" data-toggle="tab" href="#videoEdit" role="tab"
-                            aria-controls="videoEdit" aria-selected="true">User Edit</a>
+                        <a class="nav-link active" id="videadmindit-tab" data-toggle="tab" href="#videadmindit" role="tab"
+                            aria-controls="videadmindit" aria-selected="true">User Edit</a>
                     </li>
 
                     <li class="nav-item" role="presentation">
@@ -69,8 +69,8 @@
 
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="videoEdit" role="tabpanel"
-                        aria-labelledby="videoEdit-tab">
+                    <div class="tab-pane fade show active" id="videadmindit" role="tabpanel"
+                        aria-labelledby="videadmindit-tab">
                         <form action="" method="post">
                             <div class="card">
                                 <div class="card-body">
@@ -111,10 +111,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
-                                    <button formaction="/fpoly/oe/user/edits/create" class="btn btn-primary">Create</button>
-                                    <button formaction="/fpoly/oe/user/edits/update" class="btn btn-warning">Update</button>
-                                    <button formaction="/fpoly/oe/user/edits/delete" class="btn btn-danger">Delete</button>
-                                    <button formaction="/fpoly/oe/user/edits/reset" class="btn btn-info">Reset</button>
+                                    <button formaction="/fpoly/admin/user/edits/create" class="btn btn-primary">Create</button>
+                                    <button formaction="/fpoly/admin/user/edits/update" class="btn btn-warning">Update</button>
+                                    <button formaction="/fpoly/admin/user/edits/delete" class="btn btn-danger">Delete</button>
+                                    <button formaction="/fpoly/admin/user/edits/reset" class="btn btn-info">Reset</button>
                                 </div>
                             </div>
                         </form>
@@ -146,10 +146,10 @@
 	                                	</c:choose>
 	                                </td>
 	                                <td>
-	                                <form action="/fpoly/oe/user/edit/${user.id}" method="post">
+	                                <form action="/fpoly/admin/user/edit/${user.id}" method="post">
 	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-edit" aria-hidden="true"></i>  Edit</a>
 	                                </form>
-	                                <form action="/fpoly/oe/user/delete/${user.id}" method="post">
+	                                <form action="/fpoly/admin/user/delete/${user.id}" method="post">
 	                                	<a href="javascript:;" onclick="parentNode.submit();"><i class="fa fa-trash" aria-hidden="true">   Delete</i></a>
 	                                </form>
 	                                </td>

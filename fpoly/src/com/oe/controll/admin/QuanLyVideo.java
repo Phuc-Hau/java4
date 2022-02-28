@@ -18,13 +18,13 @@ import com.oe.entity.Video;
 public class QuanLyVideo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	DaoVideo daoVideo = new DaoVideo();
-	Video video = new Video();
-	List<Video> list =null;
+	
 	
 	  
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		DaoVideo daoVideo = new DaoVideo();
+		List<Video> list =null;
 		list = daoVideo.findByAlls();
 		request.setAttribute("listvideo", list);
 		request.setAttribute("showlist", "show active");
@@ -41,7 +41,9 @@ public class QuanLyVideo extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		DaoVideo daoVideo = new DaoVideo();
+		Video video = new Video();
+		List<Video> list =null;
 		String  url = request.getRequestURI();
 
 		if(url.contains("/admin/video/edit")) {

@@ -94,7 +94,7 @@
                             				</c:when>
                             			</c:choose>
                             			<a class="dropdown-item" href="/fpoly/oe/dangxuat">Đăng Xuất</a>
-                            			<a class="dropdown-item" href="/fpoly/oe/datpass">Đổi PassWord</a>
+                            			<a class="dropdown-item" href="/fpoly/oe/doipassid">Đổi PassWord</a>
                             		</c:otherwise>
                             	</c:choose>
                             	<a class="dropdown-item" href="/fpoly/oe/forgetpass">Quên Mật Khẩu</a>

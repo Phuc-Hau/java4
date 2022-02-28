@@ -17,12 +17,12 @@ import com.oe.entity.Video;
 public class menu extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	Video video = new Video();
-	DaoVideo daoVideo = new DaoVideo();
-	List<Video> list = null;
+	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		Video video = new Video();
+		DaoVideo daoVideo = new DaoVideo();
+		List<Video> list = null;
 		list = daoVideo.findByAll();
 		req.setAttribute("video", list);
 

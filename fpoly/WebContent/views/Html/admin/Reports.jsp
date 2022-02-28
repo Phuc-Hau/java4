@@ -33,7 +33,7 @@
                         </li>
 
                         <div class="nav-item">
-                            <a href="/fpoly/oe/QLnhanvien" class="nav-link">
+                            <a href="/fpoly/admin/QLnhanvien" class="nav-link">
                                 <i class="fa fa-id-card" aria-hidden="true"></i> Người Dùng
                             </a>
                         </div>
