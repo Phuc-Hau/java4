@@ -25,7 +25,7 @@ public class QuanLyVideo extends HttpServlet {
 	  
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		list = daoVideo.findByAll();
+		list = daoVideo.findByAlls();
 		request.setAttribute("listvideo", list);
 		request.setAttribute("showlist", "show active");
 		request.setAttribute("edittrue", true);
@@ -58,7 +58,7 @@ public class QuanLyVideo extends HttpServlet {
 			}
 		}
 		
-		list = daoVideo.findByAll();
+		list = daoVideo.findByAlls();
 		request.setAttribute("listvideo", list);
 		request.getRequestDispatcher("/views/Html/admin/QuanLyVideo.jsp").forward(request, response);
 	}

@@ -62,6 +62,12 @@ public class DaoVideo extends DaoASM<Video, String>{
 
 	@Override
 	public List<Video> findByAll() {
+		String jqpl ="SELECT u FROM Video u where u.active = true";
+		TypedQuery<Video> query = em.createQuery(jqpl,Video.class);
+		return query.getResultList();
+	}
+	
+	public List<Video> findByAlls() {
 		String jqpl ="SELECT u FROM Video u";
 		TypedQuery<Video> query = em.createQuery(jqpl,Video.class);
 		return query.getResultList();
