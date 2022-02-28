@@ -19,7 +19,7 @@ import com.oe.dao.DaoVideo;
 import com.oe.entity.Video;
 
 
-
+ 
 @MultipartConfig
 @WebServlet("/admin/video/edits/*")
 public class Editvideo extends HttpServlet {
