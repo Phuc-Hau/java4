@@ -37,8 +37,8 @@
 	                        </div>
 	                     
 							<div class="text-right" style="margin-top: 22px;">
-		                        <a href="" class="btn btn-success">Like</a>
-		                        <a href="ChiaSe.jsp" class="btn btn-info">Share</a>
+		                        <a href="/fpoly/oe/like/${param.id}" class="btn btn-success">Like</a>
+          						<a href="/fpoly/oe/share/${param.id}" class="btn btn-info">Share</a>
 	                    	</div>
 						</div>
                         
